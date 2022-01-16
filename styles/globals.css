@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Oswald", sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #231f20;
 }
 
 a {
