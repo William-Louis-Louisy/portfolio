@@ -1,0 +1,78 @@
+<div class="page-container">
+  <div class="project-card">
+    <!-- Data Container -->
+    <div
+      class="data-container"
+      *ngFor="let personalProject of personalProjectsList"
+    >
+      <!-- Project Image -->
+      <div class="image-container">
+        <img
+          class="project-image"
+          src="{{ personalProject.image }}"
+          alt="Project illustration"
+        />
+      </div>
+
+      <div class="data-grid">
+        <!-- Project Title -->
+        <h2 class="project-title">{{ personalProject.name }}</h2>
+
+        <!-- Project Date -->
+        <div>
+          <h3 class="item-title">Date</h3>
+          <p class="item-text">{{ personalProject.date }}</p>
+        </div>
+
+        <!-- Project Description -->
+        <div>
+          <h3 class="item-title">Description</h3>
+          <p class="item-text">
+            {{
+              currentLanguage === "en"
+                ? personalProject.short_description
+                : personalProject.short_description_fr
+            }}
+          </p>
+        </div>
+
+        <!-- Project Stack -->
+        <div>
+          <h3 class="item-title">Stack</h3>
+          <div class="stack-container">
+            <span
+              class="stack-item"
+              *ngFor="let stackItem of personalProject.stack"
+            >
+              <!-- <img
+              src="{{ stackItem.icon }}"
+              alt="{{ stackItem.name }}"
+              class="stack-icon"
+            /> -->
+              {{ stackItem.name }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Buttons row -->
+        <div class="buttons-row">
+          <!-- Project Link -->
+          <a
+            *ngIf="personalProject.link"
+            class="button-alt"
+            href="{{ personalProject.link }}"
+            target="_blank"
+            >Check it out</a
+          >
+
+          <!-- Project details -->
+          <a
+            class="button"
+            [routerLink]="['/personal-projects', personalProject._id]"
+            >Details</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

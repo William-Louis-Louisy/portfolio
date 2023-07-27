@@ -1,0 +1,27 @@
+<nav aria-label="Projects-Navigation" class="vertical-nav">
+  <ol role="list" class="list">
+    <li class="list-item" *ngFor="let project of projectsList; let i = index">
+      <!-- Vertical line -->
+      <div
+        class="vertical-line"
+        aria-hidden="true"
+        *ngIf="i < projectsList.length - 1"
+      ></div>
+      <!-- Upcoming Step -->
+      <a
+        (click)="scrollToProject(project._id)"
+        [class.active-project]="project._id === currentProjectId"
+        class="nav-link"
+      >
+        <span class="link-container" aria-hidden="true">
+          <span class="circle">
+            <span class="dot"></span>
+          </span>
+        </span>
+        <span class="link-text">
+          {{ project.name }}
+        </span>
+      </a>
+    </li>
+  </ol>
+</nav>

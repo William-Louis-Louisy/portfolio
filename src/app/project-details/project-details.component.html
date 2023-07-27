@@ -1,0 +1,172 @@
+<div
+  class="page-container"
+  *ngIf="professionalProject | async as professionalProject"
+>
+  <!-- Project Title -->
+  <h2 class="project-name">{{ professionalProject.name }}</h2>
+
+  <!-- Content -->
+  <div class="content">
+    <!-- First column -->
+    <div class="first-column">
+      <!-- Description block -->
+      <div class="description-block">
+        <h3 class="item-title">{{ "LABELS.DESCRIPTION" | translate }}</h3>
+        <p class="block-text">
+          {{
+            currentLanguage === "en"
+              ? professionalProject.description
+              : professionalProject.description_fr
+          }}
+        </p>
+      </div>
+
+      <!-- Stack block -->
+      <div class="stack-block">
+        <h3 class="item-title">{{ "LABELS.STACK" | translate }}</h3>
+        <div class="stack-container">
+          <span
+            class="stack-item"
+            *ngFor="let stackItem of professionalProject.stack"
+            >{{ stackItem.name }}</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Second column -->
+    <div class="second-column">
+      <!-- Tasks block -->
+      <div class="tasks-block">
+        <h3 class="item-title">{{ "LABELS.TASKSPERFORMED" | translate }}</h3>
+        <div #tasksContainer class="tasks-container">
+          <div
+            class="task-item"
+            *ngFor="let taskItem of professionalProject.tasks; let i = index"
+            [ngClass]="i % 2 == 0 ? 'even-row' : 'odd-row'"
+          >
+            <div class="task-header">
+              <span class="task-name">{{
+                currentLanguage === "en" ? taskItem.name : taskItem.name_fr
+              }}</span>
+              <button (click)="toggleTaskVisibility(taskItem._id)">
+                <i
+                  [ngClass]="
+                    taskVisibility[taskItem._id]
+                      ? 'fas fa-chevron-up'
+                      : 'fas fa-chevron-down'
+                  "
+                ></i>
+              </button>
+            </div>
+            <div class="task-details" *ngIf="taskVisibility[taskItem._id]">
+              {{
+                currentLanguage === "en"
+                  ? taskItem.description
+                  : taskItem.description_fr
+              }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-container" *ngIf="personalProject | async as personalProject">
+  <!-- Project Title -->
+  <h2 class="project-name">{{ personalProject.name }}</h2>
+
+  <!-- Content -->
+  <div class="content">
+    <!-- First column -->
+    <div class="first-column">
+      <!-- Description block -->
+      <div class="description-block">
+        <h3 class="item-title">{{ "LABELS.DESCRIPTION" | translate }}</h3>
+        <p class="block-text">
+          {{
+            currentLanguage === "en"
+              ? personalProject.description
+              : personalProject.description_fr
+          }}
+        </p>
+      </div>
+
+      <!-- Stack block -->
+      <div class="stack-block">
+        <h3 class="item-title">{{ "LABELS.STACK" | translate }}</h3>
+        <div class="stack-container">
+          <span
+            class="stack-item"
+            *ngFor="let stackItem of personalProject.stack"
+            >{{ stackItem.name }}</span
+          >
+        </div>
+      </div>
+
+      <!-- Links block -->
+      <div class="links-block">
+        <h3 class="item-title">{{ "LABELS.LINKS" | translate }}</h3>
+        <div class="links-container">
+          <!-- Website -->
+          <div class="git-block" *ngIf="personalProject.link">
+            <i class="fa fa-globe icon"></i>
+            <div class="git-links">
+              <a href="{{ personalProject.link }}">{{
+                personalProject.link
+              }}</a>
+            </div>
+          </div>
+
+          <!-- Github -->
+          <div class="git-block">
+            <i class="fa-brands fa-github icon"></i>
+            <div class="git-links">
+              <a href="{{ git }}" *ngFor="let git of personalProject.github">{{
+                git
+              }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second column -->
+    <div class="second-column">
+      <!-- Features block -->
+      <div class="tasks-block">
+        <h3 class="item-title">{{ "LABELS.FEATURES" | translate }}</h3>
+        <div #tasksContainer class="tasks-container">
+          <div
+            class="task-item"
+            *ngFor="let feature of personalProject.features; let i = index"
+            [ngClass]="i % 2 == 0 ? 'even-row' : 'odd-row'"
+          >
+            <div class="task-header">
+              <span class="task-name">{{
+                currentLanguage === "en" ? feature.name : feature.name_fr
+              }}</span>
+              <button (click)="toggleTaskVisibility(feature._id)">
+                <i
+                  [ngClass]="
+                    taskVisibility[feature._id]
+                      ? 'fas fa-chevron-up'
+                      : 'fas fa-chevron-down'
+                  "
+                ></i>
+              </button>
+            </div>
+            <div class="task-details" *ngIf="taskVisibility[feature._id]">
+              {{
+                currentLanguage === "en"
+                  ? feature.description
+                  : feature.description_fr
+              }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

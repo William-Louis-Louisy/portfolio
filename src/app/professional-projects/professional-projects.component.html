@@ -1,0 +1,64 @@
+<div
+  class="page-container"
+  *ngIf="professionalProjectsList | async as professionalProjects"
+>
+  <app-projects-navigation
+    [projectsList]="professionalProjects"
+  ></app-projects-navigation>
+
+  <div class="project-card">
+    <div
+      class="data-container"
+      *ngFor="let professionalProject of professionalProjects"
+      [id]="professionalProject._id"
+    >
+      <div class="image-container">
+        <h2 class="project-title-mobile">{{ professionalProject.name }}</h2>
+        <img
+          class="project-image"
+          [src]="professionalProject.image"
+          [alt]="professionalProject.name + ' image'"
+        />
+      </div>
+
+      <div class="data-grid">
+        <h2 class="project-title">{{ professionalProject.name }}</h2>
+
+        <div>
+          <h3 class="item-title">Date</h3>
+          <p class="item-text">{{ professionalProject.date }}</p>
+        </div>
+
+        <div>
+          <h3 class="item-title">Description</h3>
+          <p class="item-text">
+            {{
+              currentLanguage === "en"
+                ? professionalProject.short_description
+                : professionalProject.short_description_fr
+            }}
+          </p>
+        </div>
+
+        <div>
+          <h3 class="item-title">Stack</h3>
+          <div class="stack-container">
+            <span
+              class="stack-item"
+              *ngFor="let stackItem of professionalProject.stack"
+              >{{ stackItem.name }}</span
+            >
+          </div>
+        </div>
+
+        <div class="buttons-row">
+          <a
+            class="button"
+            [routerLink]="['/professional-projects', professionalProject._id]"
+            >Details</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

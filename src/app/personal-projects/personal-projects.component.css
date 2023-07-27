@@ -1,0 +1,129 @@
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #dcdcdc;
+  padding-top: 64px;
+}
+
+.project-card {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff8731;
+}
+
+.data-container {
+  width: 100%;
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+  padding-top: 64px;
+}
+
+.image-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-image {
+}
+
+.data-grid {
+  width: 45%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 1rem;
+}
+
+.item-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ff8731;
+}
+
+.item-text {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #dcdcdc;
+}
+
+.stack-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 4px;
+}
+
+.stack-item {
+  background-color: #7a7a7a;
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.stack-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  padding: 2px;
+  border-radius: 100%;
+}
+
+.buttons-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: transparent solid 2px;
+  background-color: #ff8731;
+  color: #0a0a0a;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.button-alt {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: #ff8731 solid 2px;
+  background-color: #0a0a0a;
+  color: #ff8731;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}

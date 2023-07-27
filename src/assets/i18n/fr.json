@@ -1,0 +1,33 @@
+{
+  "HEADER": {
+    "HOME": "Accueil",
+    "JOURNEY": "Parcours",
+    "PRO_PROJECTS": "Projets professionnels",
+    "PERSONAL_PROJECTS": "Projets personnels",
+    "RESUME": "CV"
+  },
+
+  "HOMEPAGE": {
+    "TITLE": "Bonjour, je suis ",
+    "SUBTITLE": "Développeur passionné, curieux et créatif",
+    "CONTENT": "De l'exploration créative au design centré sur l'humain, résoudre des problèmes, une tasse de café à portée de main, voilà ma recette pour créer des applications intuitives et performantes. Découvrez mon travail et apprenez en plus sur moi."
+  },
+
+  "JOURNEY": {
+    "SUMMARY1": "Avant de plonger dans le domaine passionnant du développement web, j'ai suivi un parcours professionnel diversifié qui m'a permis d'acquérir une large gamme de compétences précieuses.",
+    "SUMMARY2": "J'ai débuté ma carrière en tant qu'électricien, une expérience qui m'a appris à travailler efficacement en équipe pour atteindre des objectifs communs et à résoudre des problèmes techniques.",
+    "SUMMARY3": "Ensuite, j'ai passé une décennie dans le secteur de la restauration en tant que manager. Cette période m'a permis d'acquérir une solide expérience en leadership, gestion de projets, communication ainsi qu'une excellente organisation et gestion du temps.",
+    "SUMMARY4": "Enfin, j'ai exercé pendant trois ans en tant que coiffeur-barbier indépendant. Cette expérience a renforcé mon sens de l'écoute et ma précision, tout en développant ma capacité à créer des solutions sur mesure pour répondre aux besoins spécifiques de chaque client.",
+    "SUMMARY5": "Chacune de ces étapes a contribué à me forger en tant que professionnel méticuleux, adaptable et orienté vers les solutions. Ces valeurs et compétences, je les applique aujourd'hui dans mon travail en tant que développeur web."
+  },
+
+  "LABELS": {
+    "DATE": "Date",
+    "DESCRIPTION": "Description",
+    "STACK": "Technologies",
+    "DETAILS": "Détails",
+    "TASKSPERFORMED": "Tâches effectuées",
+    "FEATURES": "Fonctionnalités",
+    "LINKS": "Liens"
+  }
+}

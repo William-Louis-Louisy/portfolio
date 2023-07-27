@@ -1,1 +1,39 @@
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  height: 100vh;
+  font-family: "Titillium Web", sans-serif;
+  background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)),
+    url("https://ucarecdn.com/20b634ae-99c9-4687-8fec-ffe82a92efde/fotisfotopoulos6sAl6aQ4OWIunsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Ce code CSS va styliser toutes les barres de défilement dans votre application */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7a7a7a;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8731;
+}

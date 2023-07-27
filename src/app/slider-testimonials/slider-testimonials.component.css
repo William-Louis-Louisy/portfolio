@@ -1,0 +1,126 @@
+.journey-summary {
+  position: relative;
+  margin-top: 8rem;
+  margin-left: 20%;
+  margin-right: 20%;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+.summary-content {
+  position: relative;
+  margin-left: 2.5rem;
+  width: 100%;
+}
+
+.summary-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #dcdcdc;
+  font-style: italic;
+  transition: all 0.5s ease;
+  height: 6rem;
+  width: 100%;
+}
+
+.blockquote {
+  position: relative;
+}
+
+.action-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  width: 40rem;
+}
+
+button {
+  border: none;
+  color: #ff8731;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.5rem;
+  transition-duration: 0.4s; /* Button style */
+  cursor: pointer;
+  height: 3.75rem;
+  width: 3.75rem;
+}
+
+.slide-indicators {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.slide-indicators span {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  background-color: #7a7a7a;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  cursor: pointer;
+}
+
+.slide-indicators span.active {
+  background-color: #ff8731;
+}
+
+.quote {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 9rem;
+  width: 9rem;
+  transform: translate(-2rem, -6rem);
+  color: #7a7a7a;
+  opacity: 0.375;
+}
+
+@media screen and (max-width: 799px) {
+  .action-container {
+    width: 100%;
+  }
+
+  .summary-text {
+    height: 9.5rem;
+    padding: 0 1rem;
+  }
+
+  .summary-container {
+    width: 100%;
+  }
+
+  .journey-summary {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 6rem;
+  }
+
+  .summary-content {
+    width: 100%;
+    margin: 0;
+  }
+
+  .quote {
+    height: 7rem;
+    width: 7rem;
+    transform: translate(0, -3.5rem);
+  }
+}

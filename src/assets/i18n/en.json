@@ -1,0 +1,33 @@
+{
+  "HEADER": {
+    "HOME": "Home",
+    "JOURNEY": "Journey",
+    "PRO_PROJECTS": "Professional Projects",
+    "PERSONAL_PROJECTS": "Personal Projects",
+    "RESUME": "Resume"
+  },
+
+  "HOMEPAGE": {
+    "TITLE": "Hello, I'm ",
+    "SUBTITLE": "Passionate, Curious, and Creative Developer",
+    "CONTENT": "From creative exploration to human-centered design, solving problems with a cup of coffee at hand, this is my recipe for creating intuitive and high-performing applications. Discover my work and learn more about me."
+  },
+
+  "JOURNEY": {
+    "SUMMARY1": "Before diving into the exciting field of web development, I have followed a diverse professional path that has allowed me to acquire a wide range of valuable skills.",
+    "SUMMARY2": "I started my career as an electrician, an experience that taught me to work effectively in a team to achieve common objectives and to solve technical problems.",
+    "SUMMARY3": "Then, I spent a decade in the restaurant industry as a manager. This period allowed me to gain solid experience in leadership, project management, communication, as well as excellent organization and time management skills.",
+    "SUMMARY4": "Finally, I worked for three years as an independent barber. This experience strengthened my listening skills and precision, while developing my ability to create tailor-made solutions to meet the specific needs of each client.",
+    "SUMMARY5": "Each of these stages has contributed to shaping me as a meticulous, adaptable, and solution-oriented professional. These values and skills, I apply them today in my work as a web developer."
+  },
+
+  "LABELS": {
+    "DATE": "Date",
+    "DESCRIPTION": "Description",
+    "STACK": "Stack",
+    "DETAILS": "Details",
+    "TASKSPERFORMED": "Tasks Performed",
+    "FEATURES": "Features",
+    "LINKS": "Links"
+  }
+}

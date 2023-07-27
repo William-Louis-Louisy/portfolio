@@ -1,0 +1,62 @@
+<div class="journey-container">
+  <app-slider-testimonials
+    [slides]="[
+      'JOURNEY.SUMMARY1',
+      'JOURNEY.SUMMARY2',
+      'JOURNEY.SUMMARY3',
+      'JOURNEY.SUMMARY4',
+      'JOURNEY.SUMMARY5'
+    ]"
+  ></app-slider-testimonials>
+
+  <div class="divider"></div>
+
+  <!-- Page Content -->
+  <div class="page-content">
+    <!-- Courses -->
+    <div class="column-container">
+      <h3 class="column-title">Formation</h3>
+
+      <div class="journey-card" *ngFor="let course of coursesList">
+        <img src="{{ course.logo }}" alt="school logo" class="logo" />
+        <div class="education">
+          <div class="heading">
+            <h4>{{ course.school }}</h4>
+            <p class="date">{{ course.startDate }} - {{ course.endDate }}</p>
+          </div>
+          <h5>
+            {{ currentLanguage === "en" ? course.title : course.title_fr }}
+          </h5>
+          <p>
+            {{
+              currentLanguage === "en"
+                ? course.description
+                : course.description_fr
+            }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Jobs -->
+    <div class="column-container">
+      <h3 class="column-title">Professionel</h3>
+
+      <div class="journey-card" *ngFor="let job of jobsList">
+        <img src="{{ job.logo }}" alt="company logo" class="logo" />
+        <div class="experience">
+          <div class="heading">
+            <h4>{{ job.company }}</h4>
+            <p class="date">{{ job.startDate }} - {{ job.endDate }}</p>
+          </div>
+          <h5>{{ currentLanguage === "en" ? job.title : job.title_fr }}</h5>
+          <p>
+            {{
+              currentLanguage === "en" ? job.description : job.description_fr
+            }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

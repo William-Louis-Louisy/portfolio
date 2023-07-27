@@ -1,0 +1,237 @@
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #dcdcdc;
+  padding-top: 64px;
+  padding-left: 10%;
+  padding-right: 10%;
+  overflow-x: hidden;
+}
+
+.project-name {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ff8731;
+  margin-top: 4%;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  padding-top: 64px;
+  margin-bottom: 24px;
+}
+
+.first-column,
+.second-column {
+  width: 46%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.description-block,
+.stack-block {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ff8731;
+  width: 100%;
+  text-align: left;
+}
+
+.item-text {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #dcdcdc;
+}
+
+.stack-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 4px;
+}
+
+.stack-item {
+  background-color: #7a7a7a;
+  padding: 2px 8px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+.stack-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  padding: 2px;
+  border-radius: 100%;
+}
+
+.tasks-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 12px;
+  gap: 0.25rem;
+  width: 100%;
+
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.031);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(19px);
+  border: 1px solid rgba(10, 10, 10, 0.7);
+}
+
+.odd-row {
+  background: rgba(20, 20, 20, 0.15);
+}
+
+.even-row {
+  background: rgba(10, 10, 10, 0.15);
+}
+
+.task-details {
+  padding-top: 0.5rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.links-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.links-block a:hover {
+  color: #ff8731;
+  text-decoration: underline;
+}
+
+.links-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 16px;
+}
+
+.git-block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.icon {
+  object-fit: contain;
+  border-radius: 100%;
+  font-size: 24px;
+  padding: 2px;
+}
+
+.git-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 8px;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.chevron-down,
+.chevron-up {
+  /* replace these with your preferred size */
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Below tablet screen size */
+@media screen and (max-width: 799px) {
+  .content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    margin-bottom: 24px;
+    gap: 4%;
+  }
+
+  .first-column,
+  .second-column {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .second-column {
+    margin-top: 2rem;
+  }
+
+  .page-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .stack-container {
+    gap: 0.5rem;
+  }
+}
