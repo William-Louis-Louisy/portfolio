@@ -1,9 +1,10 @@
 <div
   class="page-container"
-  *ngIf="professionalProjectsList | async as professionalProjects"
+  *ngIf="professionalProjects$ | async as professionalProjects"
 >
   <app-projects-navigation
     [projectsList]="professionalProjects"
+    [currentProjectId]="currentVisibleProjectId"
   ></app-projects-navigation>
 
   <div class="project-card">

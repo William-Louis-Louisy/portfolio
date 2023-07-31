@@ -7,8 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ProjectsNavigationComponent {
   @Input() projectsList: any;
-
-  currentProjectId: string | null = null;
+  @Input() currentProjectId: string | null = null;
 
   ngOnInit(): void {
     console.log('LISTE DE PROJETS : ', this.projectsList);
