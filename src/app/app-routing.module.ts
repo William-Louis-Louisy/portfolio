@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './homepage/homepage.component';
-import { MyJourneyComponent } from './my-journey/my-journey.component';
-import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.component';
-import { ProfessionalProjectsComponent } from './professional-projects/professional-projects.component';
-import { PersonalProjectsComponent } from './personal-projects/personal-projects.component';
-import { ProjectDetailsComponent } from './project-details/project-details.component';
-import { AdminPanelComponent } from './admin-panel/admin-panel.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
+import { MyJourneyComponent } from './pages/my-journey/my-journey.component';
+import { CurriculumVitaeComponent } from './pages/curriculum-vitae/curriculum-vitae.component';
+import { ProfessionalProjectsComponent } from './pages/professional-projects/professional-projects.component';
+import { PersonalProjectsComponent } from './pages/personal-projects/personal-projects.component';
+import { ProjectDetailsComponent } from './pages/project-details/project-details.component';
+import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent, pathMatch: 'full' },

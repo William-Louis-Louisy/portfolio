@@ -25,7 +25,7 @@
 }
 
 .summary-text {
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 500;
   color: #dcdcdc;
   font-style: italic;
@@ -54,7 +54,7 @@ button {
   text-align: center;
   display: inline-block;
   font-size: 1.5rem;
-  transition-duration: 0.4s; /* Button style */
+  transition-duration: 0.4s;
   cursor: pointer;
   height: 3.75rem;
   width: 3.75rem;

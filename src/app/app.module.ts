@@ -3,19 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MyJourneyComponent } from './my-journey/my-journey.component';
-import { HomepageComponent } from './homepage/homepage.component';
-import { CurriculumVitaeComponent } from './curriculum-vitae/curriculum-vitae.component';
-import { ProfessionalProjectsComponent } from './professional-projects/professional-projects.component';
-import { PersonalProjectsComponent } from './personal-projects/personal-projects.component';
-import { ProjectDetailsComponent } from './project-details/project-details.component';
-import { AdminPanelComponent } from './admin-panel/admin-panel.component';
-import { HeaderComponent } from './header/header.component';
-import { CoursesService } from './courses.service';
+import { MyJourneyComponent } from './pages/my-journey/my-journey.component';
+import { HomepageComponent } from './pages/homepage/homepage.component';
+import { CurriculumVitaeComponent } from './pages/curriculum-vitae/curriculum-vitae.component';
+import { ProfessionalProjectsComponent } from './pages/professional-projects/professional-projects.component';
+import { PersonalProjectsComponent } from './pages/personal-projects/personal-projects.component';
+import { ProjectDetailsComponent } from './pages/project-details/project-details.component';
+import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
+import { HeaderComponent } from './components/header/header.component';
+import { CoursesService } from './services/courses.service';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { ProjectsNavigationComponent } from './projects-navigation/projects-navigation.component';
-import { SliderTestimonialsComponent } from './slider-testimonials/slider-testimonials.component';
+import { ProjectsNavigationComponent } from './components/projects-navigation/projects-navigation.component';
+import { SliderTestimonialsComponent } from './components/slider-testimonials/slider-testimonials.component';
+import { CustomSelectComponent } from './components/custom-select/custom-select.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -34,6 +35,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     HeaderComponent,
     ProjectsNavigationComponent,
     SliderTestimonialsComponent,
+    CustomSelectComponent,
   ],
   imports: [
     BrowserModule,

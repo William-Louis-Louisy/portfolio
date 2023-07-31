@@ -18,9 +18,10 @@
 }
 
 .logo {
-  color: #ff8731;
+  /* color: #ff8731;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2rem; */
+  height: 1.5rem;
 }
 
 .links-container {

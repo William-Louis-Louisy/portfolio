@@ -1,8 +1,8 @@
 import { Subscription } from 'rxjs';
-import { IJob } from '../types/job.model';
-import { ICourse } from '../types/course.model';
+import { IJob } from '../../types/job.model';
+import { ICourse } from '../../types/course.model';
 import { Component, OnInit } from '@angular/core';
-import { CoursesService } from '../courses.service';
+import { CoursesService } from '../../services/courses.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
