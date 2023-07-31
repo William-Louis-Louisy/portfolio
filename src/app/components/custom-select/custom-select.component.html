@@ -1,0 +1,8 @@
+<div class="button" (click)="toggleDropdown()">
+  Mes projets
+  <i class="fas fa-chevron-down icon" [ngClass]="{ rotate: showDropdown }"></i>
+  <div class="dropdown" *ngIf="showDropdown">
+    <a class="link" routerLink="/professional-projects">Professionnels</a>
+    <a class="link" routerLink="/personal-projects">Personnels</a>
+  </div>
+</div>

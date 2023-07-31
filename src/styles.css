@@ -5,13 +5,17 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   height: 100vh;
   font-family: "Titillium Web", sans-serif;
   background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)),
     url("https://ucarecdn.com/20b634ae-99c9-4687-8fec-ffe82a92efde/fotisfotopoulos6sAl6aQ4OWIunsplash.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100vw 100vh;
   background-position: center;
   background-attachment: fixed;
 }

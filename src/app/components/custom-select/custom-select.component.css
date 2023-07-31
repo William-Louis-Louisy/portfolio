@@ -1,0 +1,46 @@
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 0.325rem;
+  border: transparent solid 2px;
+  background-color: #ff8731;
+  color: #0a0a0a;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  padding: 0.5rem;
+  left: 0;
+  right: 0;
+  border-radius: 0 0 0.325rem 0.325rem;
+  color: #dcdcdc;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  background: rgba(10, 10, 10, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.031);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(19px);
+  border: 1px solid rgba(10, 10, 10, 0.7);
+}
+
+.link {
+  padding: 0.5rem 1rem;
+}
+
+.link:hover {
+  color: #ff8731;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.icon {
+  margin-left: 1rem;
+}

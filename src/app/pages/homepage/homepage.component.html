@@ -1,15 +1,25 @@
 <div class="page-container">
   <div class="container">
+    <!-- Page Title -->
     <h1 class="title fadeInLeft">
       {{ "HOMEPAGE.TITLE" | translate
       }}<span class="my-name">William Louis-Louisy</span>
     </h1>
+
+    <!-- Subtitle -->
     <h2 class="subtitle fadeInLeft">{{ "HOMEPAGE.SUBTITLE" | translate }}</h2>
 
+    <!-- Page Content -->
     <div class="typewritter-container">
       <p class="content typewritter">
         {{ "HOMEPAGE.CONTENT" | translate }}
       </p>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions-container">
+      <a class="button-alt" routerLink="/journey">Mon parcours</a>
+      <app-custom-select></app-custom-select>
     </div>
   </div>
 </div>
