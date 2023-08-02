@@ -1,17 +1,20 @@
 <div
   class="page-container"
-  *ngIf="professionalProjectsList | async as professionalProjects"
+  *ngIf="professionalProjects$ | async as professionalProjects"
 >
   <app-projects-navigation
     [projectsList]="professionalProjects"
+    [currentProjectId]="currentVisibleProjectId"
   ></app-projects-navigation>
 
   <div class="project-card">
+    <!-- Data Container -->
     <div
       class="data-container"
       *ngFor="let professionalProject of professionalProjects"
       [id]="professionalProject._id"
     >
+      <!-- Project Image -->
       <div class="image-container">
         <h2 class="project-title-mobile">{{ professionalProject.name }}</h2>
         <img
@@ -22,13 +25,16 @@
       </div>
 
       <div class="data-grid">
+        <!-- Project Title -->
         <h2 class="project-title">{{ professionalProject.name }}</h2>
 
+        <!-- Project Date -->
         <div>
           <h3 class="item-title">Date</h3>
           <p class="item-text">{{ professionalProject.date }}</p>
         </div>
 
+        <!-- Project Description -->
         <div>
           <h3 class="item-title">Description</h3>
           <p class="item-text">
@@ -40,6 +46,7 @@
           </p>
         </div>
 
+        <!-- Project Stack -->
         <div>
           <h3 class="item-title">Stack</h3>
           <div class="stack-container">

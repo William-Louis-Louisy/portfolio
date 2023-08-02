@@ -7,7 +7,7 @@
   align-items: center;
   color: #dcdcdc;
   padding-top: 64px;
-  overflow-x: hidden; /* Ajouter cette ligne */
+  overflow-x: hidden;
 }
 
 .project-card {
