@@ -1,16 +1,26 @@
-<div class="page-container">
+<div
+  class="page-container"
+  *ngIf="personalProjects$ | async as personalProjects"
+>
+  <app-projects-navigation
+    [projectsList]="personalProjects"
+    [currentProjectId]="currentVisibleProjectId"
+  ></app-projects-navigation>
+
   <div class="project-card">
     <!-- Data Container -->
     <div
       class="data-container"
-      *ngFor="let personalProject of personalProjectsList"
+      *ngFor="let personalProject of personalProjects"
+      [id]="personalProject._id"
     >
       <!-- Project Image -->
       <div class="image-container">
+        <h2 class="project-title-mobile">{{ personalProject.name }}</h2>
         <img
           class="project-image"
-          src="{{ personalProject.image }}"
-          alt="Project illustration"
+          [src]="personalProject.image"
+          [alt]="personalProject.name + ' image'"
         />
       </div>
 

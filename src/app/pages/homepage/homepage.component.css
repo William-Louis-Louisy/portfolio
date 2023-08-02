@@ -7,6 +7,20 @@
   align-items: center;
   color: #dcdcdc;
   overflow: hidden;
+  position: relative;
+}
+
+.image-container {
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  right: -4rem;
+  top: 0;
+}
+
+.image {
+  filter: grayscale();
+  opacity: 0.98;
 }
 
 .container {
