@@ -1,8 +1,7 @@
 <header>
   <nav class="navbar">
     <div class="nav-container">
-      <div>
-        <!-- <p class="logo">WLL</p> -->
+      <a routerLink="/">
         <svg
           id="Calque_1"
           data-name="Calque 1"
@@ -54,7 +53,7 @@
             d="m381.04,101.6h-50.79c1.93-16.05,3.83-31.84,5.77-48h50.77c-1.91,15.91-3.81,31.8-5.76,48Z"
           />
         </svg>
-      </div>
+      </a>
 
       <div class="links-container">
         <a
@@ -121,7 +120,7 @@
 
   <div class="mobile-header">
     <!-- Logo -->
-    <div class="logo-container">
+    <a class="logo-container" routerLink="/">
       <svg
         id="Calque_1"
         data-name="Calque 1"
@@ -173,7 +172,7 @@
           d="m381.04,101.6h-50.79c1.93-16.05,3.83-31.84,5.77-48h50.77c-1.91,15.91-3.81,31.8-5.76,48Z"
         />
       </svg>
-    </div>
+    </a>
 
     <!-- Icône du menu burger -->
     <div class="burger-menu" (click)="toggleMenu()">

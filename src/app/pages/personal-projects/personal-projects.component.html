@@ -30,13 +30,13 @@
 
         <!-- Project Date -->
         <div>
-          <h3 class="item-title">Date</h3>
+          <h3 class="item-title">{{ "LABELS.DATE" | translate }}</h3>
           <p class="item-text">{{ personalProject.date }}</p>
         </div>
 
         <!-- Project Description -->
         <div>
-          <h3 class="item-title">Description</h3>
+          <h3 class="item-title">{{ "LABELS.DESCRIPTION" | translate }}</h3>
           <p class="item-text">
             {{
               currentLanguage === "en"
@@ -48,7 +48,7 @@
 
         <!-- Project Stack -->
         <div>
-          <h3 class="item-title">Stack</h3>
+          <h3 class="item-title">{{ "LABELS.STACK" | translate }}</h3>
           <div class="stack-container">
             <span
               class="stack-item"
@@ -72,14 +72,14 @@
             class="button-alt"
             href="{{ personalProject.link }}"
             target="_blank"
-            >Check it out</a
+            >{{ "LABELS.CHECK_IT_OUT" | translate }}</a
           >
 
           <!-- Project details -->
           <a
             class="button"
             [routerLink]="['/personal-projects', personalProject._id]"
-            >Details</a
+            >{{ "LABELS.DETAILS" | translate }}</a
           >
         </div>
       </div>

@@ -10,7 +10,6 @@ export class ProjectsNavigationComponent {
   @Input() currentProjectId: string | null = null;
 
   ngOnInit(): void {
-    console.log('LISTE DE PROJETS : ', this.projectsList);
     this.currentProjectId = this.projectsList[0]._id;
   }
 

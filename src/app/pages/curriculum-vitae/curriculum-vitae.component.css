@@ -8,3 +8,14 @@
   color: #dcdcdc;
   padding-top: 64px;
 }
+
+.link {
+  color: #ff8731;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.warning {
+  padding: 4rem 1rem;
+  text-align: center;
+}

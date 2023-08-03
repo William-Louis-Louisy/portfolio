@@ -1,8 +1,12 @@
 <div class="button" (click)="toggleDropdown()">
-  Mes projets
+  {{ "LABELS.MY_PROJECTS" | translate }}
   <i class="fas fa-chevron-down icon" [ngClass]="{ rotate: showDropdown }"></i>
   <div class="dropdown" *ngIf="showDropdown">
-    <a class="link" routerLink="/professional-projects">Professionnels</a>
-    <a class="link" routerLink="/personal-projects">Personnels</a>
+    <a class="link" routerLink="/professional-projects">{{
+      "LABELS.PROFESSIONAL" | translate
+    }}</a>
+    <a class="link" routerLink="/personal-projects">{{
+      "LABELS.PERSONAL" | translate
+    }}</a>
   </div>
 </div>

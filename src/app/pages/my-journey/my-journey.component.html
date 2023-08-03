@@ -15,7 +15,7 @@
   <div class="page-content">
     <!-- Courses -->
     <div class="column-container">
-      <h3 class="column-title">Formation</h3>
+      <h3 class="column-title">{{ "LABELS.COURSES" | translate }}</h3>
 
       <div class="journey-card" *ngFor="let course of coursesList">
         <img src="{{ course.logo }}" alt="school logo" class="logo" />
@@ -40,7 +40,7 @@
 
     <!-- Jobs -->
     <div class="column-container">
-      <h3 class="column-title">Professionel</h3>
+      <h3 class="column-title">{{ "LABELS.CAREER_PATH" | translate }}</h3>
 
       <div class="journey-card" *ngFor="let job of jobsList">
         <img src="{{ job.logo }}" alt="company logo" class="logo" />
