@@ -28,6 +28,13 @@
     "DETAILS": "Details",
     "TASKSPERFORMED": "Tasks Performed",
     "FEATURES": "Features",
-    "LINKS": "Links"
+    "LINKS": "Links",
+    "MY_JOURNEY": "My Journey",
+    "MY_PROJECTS": "My Projects",
+    "PERSONAL": "Personal",
+    "PROFESSIONAL": "Professional",
+    "COURSES": "Courses",
+    "CAREER_PATH": "Career Path",
+    "CHECK_IT_OUT": "Check it out"
   }
 }

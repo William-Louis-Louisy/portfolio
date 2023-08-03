@@ -65,11 +65,6 @@ export class ProjectDetailsComponent implements OnInit {
         this.personalProject$ = this.projectsService.getPersonalProjectById(
           this.id
         );
-
-        // Subscribe to professionalProject$ to log the data
-        this.professionalProject$.subscribe((project) => {
-          console.log(project);
-        });
       }
     });
 
