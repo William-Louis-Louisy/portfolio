@@ -165,25 +165,33 @@
   }
 
   .project-card {
-    width: 100%; /* set width to 100% */
+    width: 100%;
   }
 
   .data-container {
     display: flex;
     flex-direction: row;
     overflow-x: auto;
-    overflow-y: hidden; /* Added this line */
-    width: 100%; /* Added this line */
+    overflow-y: hidden;
+    width: 100%;
+  }
+
+  .image-container {
+    display: none;
   }
 
   .image-container,
   .data-grid {
-    flex: 0 0 100vw; /* change width to flex: 0 0 80vw; */
+    flex: 0 0 100vw;
     padding: 0 1rem 4rem 1rem;
   }
 
   .project-title {
-    display: none;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff8731;
+    margin-bottom: 2rem;
   }
 
   .project-title-mobile {
@@ -208,5 +216,21 @@
 
   .button {
     font-size: 0.825rem;
+  }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ff8731;
+    border-radius: 2px;
   }
 }

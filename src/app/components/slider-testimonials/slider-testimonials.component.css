@@ -98,6 +98,7 @@ button {
   }
 
   .summary-text {
+    font-size: 1.125rem;
     height: 9.5rem;
     padding: 0 1rem;
   }
@@ -110,7 +111,7 @@ button {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 6rem;
+    margin-top: 4rem;
   }
 
   .summary-content {

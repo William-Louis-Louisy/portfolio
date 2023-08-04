@@ -176,6 +176,10 @@
     width: 100%; /* Added this line */
   }
 
+  .image-container {
+    display: none;
+  }
+
   .image-container,
   .data-grid {
     flex: 0 0 100vw; /* change width to flex: 0 0 80vw; */
@@ -183,7 +187,11 @@
   }
 
   .project-title {
-    display: none;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff8731;
+    margin-bottom: 2rem;
   }
 
   .project-title-mobile {
@@ -206,7 +214,8 @@
     font-size: 0.825rem;
   }
 
-  .button {
+  .button,
+  .button-alt {
     font-size: 0.825rem;
   }
 }

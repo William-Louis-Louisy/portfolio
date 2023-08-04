@@ -41,3 +41,17 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #ff8731;
 }
+
+/* https://ucarecdn.com/946dd327-fd5c-4750-b0c3-0a6ca01ca5fc/fotismobile.png */
+
+/* Below tablet screen size */
+@media screen and (max-width: 799px) {
+  body {
+    background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)),
+      url("https://ucarecdn.com/946dd327-fd5c-4750-b0c3-0a6ca01ca5fc/fotismobile.png");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-position: center;
+    background-attachment: fixed;
+  }
+}
