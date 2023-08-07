@@ -23,7 +23,7 @@
   height: 100%;
   display: flex;
   flex-direction: row;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   padding-top: 64px;
   margin-bottom: 24px;
@@ -35,7 +35,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   gap: 2rem;
 }
@@ -68,7 +68,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
@@ -97,8 +97,8 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-wrap: wrap;
   margin-top: 4px;
 }
@@ -106,7 +106,7 @@
 .task-item {
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   padding: 12px;
   gap: 0.25rem;
   width: 100%;
@@ -142,8 +142,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .links-block a:hover {
@@ -155,8 +155,8 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 16px;
 }
 
@@ -164,8 +164,8 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 8px;
   margin-top: 8px;
 }
@@ -180,8 +180,8 @@
 .git-links {
   display: flex;
   flex-direction: column;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 8px;
 }
 
@@ -217,7 +217,7 @@ button {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     gap: 2rem;
   }
