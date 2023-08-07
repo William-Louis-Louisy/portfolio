@@ -7,11 +7,13 @@ import { ProfessionalProjectsComponent } from './pages/professional-projects/pro
 import { PersonalProjectsComponent } from './pages/personal-projects/personal-projects.component';
 import { ProjectDetailsComponent } from './pages/project-details/project-details.component';
 import { AdminPanelComponent } from './pages/admin-panel/admin-panel.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent, pathMatch: 'full' },
   { path: 'journey', component: MyJourneyComponent },
   { path: 'cv', component: CurriculumVitaeComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'professional-projects', component: ProfessionalProjectsComponent },
   { path: 'personal-projects', component: PersonalProjectsComponent },
   { path: 'personal-projects/:id', component: ProjectDetailsComponent },

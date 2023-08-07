@@ -1,0 +1,127 @@
+.page-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  color: #dcdcdc;
+  padding-top: 6rem;
+  padding-left: 10%;
+  padding-right: 10%;
+  overflow-x: hidden;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1.5rem;
+
+  background: rgba(10, 10, 10, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.031);
+  backdrop-filter: blur(19px);
+  -webkit-backdrop-filter: blur(19px);
+  border-radius: 6px;
+  border: 1px solid rgba(10, 10, 10, 0.7);
+}
+
+.image-container {
+  height: 100%;
+}
+
+.image-container .contact-image {
+  height: 8rem;
+  border-radius: 50%;
+  border: 0.5rem solid #0a0a0a;
+}
+
+.data-container {
+  padding: 1.5rem;
+}
+
+.data-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.data-container ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.data-container ul li .label {
+  color: #ff8731;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.data-container ul li .label i {
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+}
+
+.data-container ul li .label span {
+  font-weight: bold;
+}
+
+.data-container ul li a:hover {
+  text-decoration: underline;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  color: #ff8731;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #dcdcdc;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  max-width: 32rem;
+}
+
+.underborder {
+  border-bottom: 1px solid #ff8731;
+  padding-bottom: 1rem;
+}
+
+/* MEDIA QUERIES FOR SMARTPHONES AND TABLETS */
+@media screen and (max-width: 799px) {
+  .page-container {
+    padding: 5rem 1rem 0 1rem;
+    justify-content: start;
+  }
+
+  .contact-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .data-container {
+    padding: 0;
+  }
+
+  .data-container ul li .label {
+    min-width: fit-content;
+  }
+
+  .data-container ul li .label span {
+    display: none;
+  }
+
+  .subtitle {
+    font-size: 1.125rem;
+  }
+}

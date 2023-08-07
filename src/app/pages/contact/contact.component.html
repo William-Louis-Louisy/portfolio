@@ -1,0 +1,31 @@
+<div class="page-container">
+  <!-- Page title -->
+  <h1 class="page-title">{{ "CONTACT.TITLE" | translate }}</h1>
+  <h2 class="subtitle">{{ "CONTACT.SUBTITLE" | translate }}</h2>
+
+  <!-- Contact card -->
+  <div class="contact-card">
+    <!-- Contact Image -->
+    <div class="image-container">
+      <img
+        class="contact-image"
+        src="https://ucarecdn.com/4ca2069e-077b-40d8-8510-8ad746a91c2f/1634407129259.jpg"
+        alt="Contact image"
+      />
+    </div>
+
+    <!-- Data Container -->
+    <div class="data-container">
+      <ul>
+        <li *ngFor="let item of data; let i = index" class="underborder">
+          <div class="label">
+            <i [class]="item.icon"></i>
+            <!-- <span>{{ item.label | translate }}</span> -->
+          </div>
+
+          <a [href]="item.value" target="_blank">{{ item.alt }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

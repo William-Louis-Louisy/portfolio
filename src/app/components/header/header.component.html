@@ -81,6 +81,9 @@
         <a routerLink="/cv" routerLinkActive="active" class="nav-link">{{
           "HEADER.RESUME" | translate
         }}</a>
+        <a routerLink="/contact" routerLinkActive="active" class="nav-link">{{
+          "HEADER.CONTACT" | translate
+        }}</a>
         <button (click)="toggleLanguage()" class="toggle">
           <svg
             *ngIf="currentLanguage === 'fr'"
@@ -223,6 +226,13 @@
           class="mobile-nav-link"
           (click)="toggleMenu()"
           >{{ "HEADER.RESUME" | translate }}</a
+        >
+        <a
+          routerLink="/contact"
+          routerLinkActive="active"
+          class="mobile-nav-link"
+          (click)="toggleMenu()"
+          >{{ "HEADER.CONTACT" | translate }}</a
         >
       </div>
       <button (click)="toggleLanguage()" class="language-toggle">

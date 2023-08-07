@@ -18,18 +18,15 @@
 }
 
 .logo {
-  /* color: #ff8731;
-  font-weight: bold;
-  font-size: 2rem; */
   height: 1.5rem;
 }
 
 .links-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: end;
   align-items: center;
   height: 100%;
-  width: 60%;
+  width: 80%;
   gap: 1rem;
   color: #dcdcdc;
 }
@@ -44,6 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   border-bottom: transparent 4px solid;
 }
 
@@ -193,8 +191,8 @@
   margin-bottom: 1rem;
 }
 
-/* Style pour les écrans de moins de 768px de large */
-@media (max-width: 768px) {
+/* Style pour les écrans de moins de 799px de large */
+@media (max-width: 799px) {
   .navbar {
     display: none;
   }
