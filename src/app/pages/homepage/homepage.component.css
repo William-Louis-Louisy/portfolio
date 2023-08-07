@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #dcdcdc;
+  color: var(--text-color);
   overflow: hidden;
   position: relative;
 }
@@ -34,7 +34,7 @@
 .title {
   font-size: 3.5em;
   text-transform: uppercase;
-  color: #dcdcdc;
+  color: var(--text-color);
   animation: fadeInLeft 2s forwards;
   opacity: 0;
 }
@@ -71,9 +71,9 @@
 .button-alt {
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  border: #ff8731 solid 2px;
-  background-color: #0a0a0a;
-  color: #ff8731;
+  border: var(--accent-color) solid 2px;
+  background-color: var(--background-color);
+  color: var(--accent-color);
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -89,7 +89,7 @@
 }
 
 .my-name {
-  color: #ff8731;
+  color: var(--accent-color);
   font-weight: bold;
 }
 

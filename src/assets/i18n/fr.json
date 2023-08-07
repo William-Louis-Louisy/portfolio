@@ -2,8 +2,9 @@
   "HEADER": {
     "HOME": "Accueil",
     "JOURNEY": "Parcours",
-    "PRO_PROJECTS": "Projets professionnels",
-    "PERSONAL_PROJECTS": "Projets personnels",
+    "PROJECTS": "Projets",
+    "PRO_PROJECTS": "Professionnels",
+    "PERSONAL_PROJECTS": "Personnels",
     "RESUME": "CV",
     "CONTACT": "Contact"
   },

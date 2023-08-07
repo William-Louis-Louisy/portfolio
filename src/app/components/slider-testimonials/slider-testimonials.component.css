@@ -27,7 +27,7 @@
 .summary-text {
   font-size: 1.25rem;
   font-weight: 500;
-  color: #dcdcdc;
+  color: var(--text-color);
   font-style: italic;
   transition: all 0.5s ease;
   height: 6rem;
@@ -50,7 +50,7 @@
 
 button {
   border: none;
-  color: #ff8731;
+  color: var(--accent-color);
   text-align: center;
   display: inline-block;
   font-size: 1.5rem;
@@ -70,7 +70,7 @@ button {
   width: 10px;
   height: 10px;
   margin: 0 5px;
-  background-color: #7a7a7a;
+  background-color: var(--alt-bg-color);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
@@ -78,7 +78,7 @@ button {
 }
 
 .slide-indicators span.active {
-  background-color: #ff8731;
+  background-color: var(--accent-color);
 }
 
 .quote {
@@ -88,7 +88,7 @@ button {
   height: 9rem;
   width: 9rem;
   transform: translate(-2rem, -6rem);
-  color: #7a7a7a;
+  color: var(--alt-bg-color);
   opacity: 0.375;
 }
 

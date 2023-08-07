@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs';
 export class HomepageComponent implements OnInit {
   // Current language
   currentLanguage: string;
-
+  // Language change subscription
   langChangeSubscription?: Subscription;
 
   constructor(private translate: TranslateService) {

@@ -2,8 +2,8 @@
   padding: 0.5rem 1rem;
   border-radius: 0.325rem;
   border: transparent solid 2px;
-  background-color: #ff8731;
-  color: #0a0a0a;
+  background-color: var(--accent-color);
+  color: var(--background-color);
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -16,7 +16,7 @@
   left: 0;
   right: 0;
   border-radius: 0 0 0.325rem 0.325rem;
-  color: #dcdcdc;
+  color: var(--text-color);
   margin-top: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -34,7 +34,7 @@
 }
 
 .link:hover {
-  color: #ff8731;
+  color: var(--accent-color);
 }
 
 .rotate {

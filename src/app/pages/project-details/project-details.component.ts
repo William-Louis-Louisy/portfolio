@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from '../../services/projects.service';
 import { TranslateService } from '@ngx-translate/core';
+import { Project } from 'src/app/types/project.model';
 
 @Component({
   selector: 'app-project-details',
@@ -14,10 +15,10 @@ export class ProjectDetailsComponent implements OnInit {
   private id!: string;
 
   // Professional project
-  private professionalProject$!: Observable<any>;
+  private professionalProject$!: Observable<Project>;
 
   // Personal project
-  private personalProject$!: Observable<any>;
+  private personalProject$!: Observable<Project>;
 
   // Subscription to paramMap
   private paramMapSubscription?: Subscription;

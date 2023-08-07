@@ -5,6 +5,13 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --accent-color: #ff8731;
+  --background-color: #0a0a0a;
+  --text-color: #dcdcdc;
+  --alt-bg-color: #7a7a7a;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -28,21 +35,19 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #0a0a0a;
+  background: var(--background-color);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #7a7a7a;
+  background: var(--alt-bg-color);
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff8731;
+  background: var(--accent-color);
 }
-
-/* https://ucarecdn.com/946dd327-fd5c-4750-b0c3-0a6ca01ca5fc/fotismobile.png */
 
 /* Below tablet screen size */
 @media screen and (max-width: 799px) {

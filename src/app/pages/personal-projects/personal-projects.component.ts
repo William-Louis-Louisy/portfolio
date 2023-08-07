@@ -8,6 +8,7 @@ import {
 import { ProjectsService } from '../../services/projects.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription, Observable } from 'rxjs';
+import { Project } from 'src/app/types/project.model';
 
 @Component({
   selector: 'app-personal-projects',
@@ -22,10 +23,10 @@ export class PersonalProjectsComponent implements OnInit {
   @Output() visibleProjectIdChange = new EventEmitter<string>();
 
   // Observable to fetch the list of personal projects
-  public personalProjects$: Observable<any>;
+  public personalProjects$: Observable<Project[]>;
 
   // Personal projects list
-  private personalProjectsList: any[] = [];
+  private personalProjectsList: Project[] = [];
 
   // Current language
   currentLanguage: string;
