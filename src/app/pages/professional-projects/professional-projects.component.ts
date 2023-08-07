@@ -9,6 +9,7 @@ import {
 import { ProjectsService } from '../../services/projects.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription, Observable } from 'rxjs';
+import { Project } from 'src/app/types/project.model';
 
 @Component({
   selector: 'app-professional-projects',
@@ -23,10 +24,10 @@ export class ProfessionalProjectsComponent implements OnInit {
   @Output() visibleProjectIdChange = new EventEmitter<string>();
 
   // Observable to fetch the list of professional projects
-  public professionalProjects$: Observable<any>;
+  public professionalProjects$: Observable<Project[]>;
 
   // List of professional projects
-  private professionalProjectsList: any[] = [];
+  private professionalProjectsList: Project[] = [];
 
   // The current language of the application
   currentLanguage: string;
@@ -39,7 +40,7 @@ export class ProfessionalProjectsComponent implements OnInit {
     private translate: TranslateService
   ) {
     // Initialize professionalProjects$ with an empty Observable
-    this.professionalProjects$ = new Observable<any>();
+    this.professionalProjects$ = new Observable<Project[]>();
 
     // Initialize currentLanguage with the current language from the TranslateService
     this.currentLanguage = translate.currentLang;

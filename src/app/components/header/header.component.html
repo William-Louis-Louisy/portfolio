@@ -1,61 +1,15 @@
 <header>
+  <!-- Navbar Section -->
   <nav class="navbar">
     <div class="nav-container">
+      <!-- Logo Section -->
       <a routerLink="/">
-        <svg
-          id="Calque_1"
-          data-name="Calque 1"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 389.76 104.07"
-          class="logo"
-        >
-          <defs>
-            <style>
-              .cls-1 {
-                fill: transparent;
-              }
-
-              .cls-2 {
-                fill: #ff8731;
-              }
-            </style>
-          </defs>
-          <path
-            class="cls-1"
-            d="m0,104.07V0c129.92,0,259.84,0,389.76,0,0,34.69,0,69.38,0,104.07H0Zm216.47-2.52c4.02-33.43,8-66.54,12-99.75h-50.92c-4.01,33.21-8.02,66.34-12.06,99.75h50.98Zm58.8.06h50.88c4.03-33.39,8.04-66.57,12.08-99.95h-50.88c-4.02,33.28-8.04,66.5-12.08,99.95ZM1.72,1.51c0,.76-.14,1.45.02,2.08,3.21,12.79,6.4,25.58,9.69,38.35,4.79,18.61,9.63,37.21,14.56,55.79.36,1.36,1.52,3.54,2.38,3.57,8.54.33,17.1.31,25.65.35,6.62.03,13.24,0,19.95,0C65.32,67.88,56.81,34.66,48.32,1.51H1.72Zm51.22.24c2.22,8.82,4.31,17.3,6.48,25.76,6.15,24.05,12.32,48.09,18.56,72.12.2.76,1.21,1.86,1.86,1.87,7.53.11,15.06.03,22.58.02,7.7-.01,15.4,0,23.11,0-8.59-33.56-17.08-66.71-25.54-99.77h-47.05Zm122.41.01h-70.8c7.91,31.35,15.76,62.5,23.81,94.4,15.85-31.84,31.29-62.86,46.99-94.4Zm102.18,51.95h-50.95c-1.93,16.05-3.83,31.88-5.74,47.75h50.89c1.93-15.91,3.83-31.53,5.8-47.75Zm103.51,47.9c1.94-16.2,3.85-32.09,5.76-48h-50.77c-1.94,16.17-3.84,31.96-5.77,48h50.79Z"
-          />
-          <path
-            class="cls-2"
-            d="m216.47,101.54h-50.98c4.04-33.41,8.04-66.54,12.06-99.75h50.92c-4,33.21-7.98,66.32-12,99.75Z"
-          />
-          <path
-            class="cls-2"
-            d="m275.27,101.61c4.04-33.46,8.06-66.67,12.08-99.95h50.88c-4.03,33.39-8.04,66.56-12.08,99.95h-50.88Z"
-          />
-          <path
-            class="cls-2"
-            d="m1.72,1.51h46.6c8.49,33.15,16.99,66.37,25.64,100.14-6.71,0-13.33.02-19.95,0-8.55-.04-17.11-.02-25.65-.35-.86-.03-2.02-2.21-2.38-3.57-4.92-18.58-9.76-37.18-14.56-55.79C8.14,29.16,4.95,16.37,1.74,3.58c-.16-.62-.02-1.32-.02-2.08Z"
-          />
-          <path
-            class="cls-2"
-            d="m52.94,1.75h47.05c8.46,33.05,16.95,66.21,25.54,99.77-7.71,0-15.41,0-23.11,0-7.53.01-15.06.09-22.58-.02-.65,0-1.66-1.11-1.86-1.87-6.24-24.03-12.41-48.07-18.56-72.12-2.16-8.46-4.26-16.94-6.48-25.76Z"
-          />
-          <path
-            class="cls-2"
-            d="m175.35,1.76c-15.7,31.54-31.14,62.56-46.99,94.4-8.05-31.91-15.9-63.05-23.81-94.4h70.8Z"
-          />
-          <path
-            class="cls-2"
-            d="m277.53,53.71c-1.97,16.22-3.86,31.84-5.8,47.75h-50.89c1.91-15.87,3.81-31.69,5.74-47.75h50.95Z"
-          />
-          <path
-            class="cls-2"
-            d="m381.04,101.6h-50.79c1.93-16.05,3.83-31.84,5.77-48h50.77c-1.91,15.91-3.81,31.8-5.76,48Z"
-          />
-        </svg>
+        <img src="assets/svg/logo.svg" alt="Logo" class="logo" />
       </a>
 
+      <!-- Links Container Section -->
       <div class="links-container">
+        <!-- Homepage -->
         <a
           routerLink="/"
           routerLinkActive="active"
@@ -63,131 +17,94 @@
           class="nav-link"
           >{{ "HEADER.HOME" | translate }}</a
         >
+        <!-- Journey -->
         <a routerLink="/journey" routerLinkActive="active" class="nav-link">{{
           "HEADER.JOURNEY" | translate
         }}</a>
-        <a
-          routerLink="/professional-projects"
-          routerLinkActive="active"
-          class="nav-link"
-          >{{ "HEADER.PRO_PROJECTS" | translate }}</a
-        >
-        <a
-          routerLink="/personal-projects"
-          routerLinkActive="active"
-          class="nav-link"
-          >{{ "HEADER.PERSONAL_PROJECTS" | translate }}</a
-        >
+        <!-- Projects -->
+        <div class="button-container">
+          <button
+            class="nav-link"
+            (click)="toggleSelect()"
+            [ngClass]="{ active: isActive() }"
+          >
+            {{ "HEADER.PROJECTS" | translate }}
+            <i
+              class="fas fa-chevron-down icon"
+              [ngClass]="{ rotate: isSelectOpen }"
+            ></i>
+          </button>
+
+          <div class="dropdown" *ngIf="isSelectOpen">
+            <a
+              routerLink="/professional-projects"
+              routerLinkActive="active"
+              (click)="toggleSelect()"
+              class="button-link"
+              >{{ "HEADER.PRO_PROJECTS" | translate }}</a
+            >
+            <a
+              routerLink="/personal-projects"
+              routerLinkActive="active"
+              (click)="toggleSelect()"
+              class="button-link"
+              >{{ "HEADER.PERSONAL_PROJECTS" | translate }}</a
+            >
+          </div>
+        </div>
+        <!-- Contact -->
+        <a routerLink="/contact" routerLinkActive="active" class="nav-link">{{
+          "HEADER.CONTACT" | translate
+        }}</a>
+        <!-- Resume -->
         <a routerLink="/cv" routerLinkActive="active" class="nav-link">{{
           "HEADER.RESUME" | translate
         }}</a>
+
+        <!-- Language Toggle -->
         <button (click)="toggleLanguage()" class="toggle">
-          <svg
+          <img
+            src="assets/svg/french-flag.svg"
             *ngIf="currentLanguage === 'fr'"
+            alt="French flag"
             class="flag"
-            xmlns="http://www.w3.org/2000/svg"
-            id="flag-icons-fr"
-            viewBox="0 0 640 480"
-          >
-            <path fill="#fff" d="M0 0h640v480H0z" />
-            <path fill="#002654" d="M0 0h213.3v480H0z" />
-            <path fill="#ce1126" d="M426.7 0H640v480H426.7z" />
-          </svg>
-          <svg
+          />
+
+          <img
+            src="assets/svg/english-flag.svg"
             *ngIf="currentLanguage === 'en'"
+            alt="English flag"
             class="flag"
-            xmlns="http://www.w3.org/2000/svg"
-            id="flag-icons-gb"
-            viewBox="0 0 640 480"
-          >
-            <path fill="#012169" d="M0 0h640v480H0z" />
-            <path
-              fill="#FFF"
-              d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"
-            />
-            <path
-              fill="#C8102E"
-              d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"
-            />
-            <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z" />
-            <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z" />
-          </svg>
+          />
+
           {{ currentLanguage === "en" ? "EN" : "FR" }}
         </button>
       </div>
     </div>
   </nav>
 
+  <!-- Mobile Header Section -->
   <div class="mobile-header">
     <!-- Logo -->
     <a class="logo-container" routerLink="/">
-      <svg
-        id="Calque_1"
-        data-name="Calque 1"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 389.76 104.07"
-        class="logo"
-      >
-        <defs>
-          <style>
-            .cls-1 {
-              fill: transparent;
-            }
-
-            .cls-2 {
-              fill: #ff8731;
-            }
-          </style>
-        </defs>
-        <path
-          class="cls-1"
-          d="m0,104.07V0c129.92,0,259.84,0,389.76,0,0,34.69,0,69.38,0,104.07H0Zm216.47-2.52c4.02-33.43,8-66.54,12-99.75h-50.92c-4.01,33.21-8.02,66.34-12.06,99.75h50.98Zm58.8.06h50.88c4.03-33.39,8.04-66.57,12.08-99.95h-50.88c-4.02,33.28-8.04,66.5-12.08,99.95ZM1.72,1.51c0,.76-.14,1.45.02,2.08,3.21,12.79,6.4,25.58,9.69,38.35,4.79,18.61,9.63,37.21,14.56,55.79.36,1.36,1.52,3.54,2.38,3.57,8.54.33,17.1.31,25.65.35,6.62.03,13.24,0,19.95,0C65.32,67.88,56.81,34.66,48.32,1.51H1.72Zm51.22.24c2.22,8.82,4.31,17.3,6.48,25.76,6.15,24.05,12.32,48.09,18.56,72.12.2.76,1.21,1.86,1.86,1.87,7.53.11,15.06.03,22.58.02,7.7-.01,15.4,0,23.11,0-8.59-33.56-17.08-66.71-25.54-99.77h-47.05Zm122.41.01h-70.8c7.91,31.35,15.76,62.5,23.81,94.4,15.85-31.84,31.29-62.86,46.99-94.4Zm102.18,51.95h-50.95c-1.93,16.05-3.83,31.88-5.74,47.75h50.89c1.93-15.91,3.83-31.53,5.8-47.75Zm103.51,47.9c1.94-16.2,3.85-32.09,5.76-48h-50.77c-1.94,16.17-3.84,31.96-5.77,48h50.79Z"
-        />
-        <path
-          class="cls-2"
-          d="m216.47,101.54h-50.98c4.04-33.41,8.04-66.54,12.06-99.75h50.92c-4,33.21-7.98,66.32-12,99.75Z"
-        />
-        <path
-          class="cls-2"
-          d="m275.27,101.61c4.04-33.46,8.06-66.67,12.08-99.95h50.88c-4.03,33.39-8.04,66.56-12.08,99.95h-50.88Z"
-        />
-        <path
-          class="cls-2"
-          d="m1.72,1.51h46.6c8.49,33.15,16.99,66.37,25.64,100.14-6.71,0-13.33.02-19.95,0-8.55-.04-17.11-.02-25.65-.35-.86-.03-2.02-2.21-2.38-3.57-4.92-18.58-9.76-37.18-14.56-55.79C8.14,29.16,4.95,16.37,1.74,3.58c-.16-.62-.02-1.32-.02-2.08Z"
-        />
-        <path
-          class="cls-2"
-          d="m52.94,1.75h47.05c8.46,33.05,16.95,66.21,25.54,99.77-7.71,0-15.41,0-23.11,0-7.53.01-15.06.09-22.58-.02-.65,0-1.66-1.11-1.86-1.87-6.24-24.03-12.41-48.07-18.56-72.12-2.16-8.46-4.26-16.94-6.48-25.76Z"
-        />
-        <path
-          class="cls-2"
-          d="m175.35,1.76c-15.7,31.54-31.14,62.56-46.99,94.4-8.05-31.91-15.9-63.05-23.81-94.4h70.8Z"
-        />
-        <path
-          class="cls-2"
-          d="m277.53,53.71c-1.97,16.22-3.86,31.84-5.8,47.75h-50.89c1.91-15.87,3.81-31.69,5.74-47.75h50.95Z"
-        />
-        <path
-          class="cls-2"
-          d="m381.04,101.6h-50.79c1.93-16.05,3.83-31.84,5.77-48h50.77c-1.91,15.91-3.81,31.8-5.76,48Z"
-        />
-      </svg>
+      <img src="assets/svg/logo.svg" alt="Logo" class="logo" />
     </a>
 
-    <!-- Icône du menu burger -->
-    <div class="burger-menu" (click)="toggleMenu()">
+    <!-- Burger menu icon -->
+    <button class="burger-menu" (click)="toggleMenu()">
       <i
         [class.fas]="true"
         [class.fa-bars]="!isMenuOpen"
         [class.fa-xmark]="isMenuOpen"
       ></i>
-    </div>
+    </button>
   </div>
 
-  <!-- Menu en plein écran -->
+  <!-- Dropdown menu -->
   <div class="fullscreen-menu" [class.active]="isMenuOpen">
     <div class="mob-cont">
       <div class="mobile-links-container">
+        <!-- Homepage -->
         <a
           routerLink="/"
           routerLinkActive="active"
@@ -196,6 +113,7 @@
           (click)="toggleMenu()"
           >{{ "HEADER.HOME" | translate }}</a
         >
+        <!-- Journey -->
         <a
           routerLink="/journey"
           routerLinkActive="active"
@@ -203,6 +121,7 @@
           (click)="toggleMenu()"
           >{{ "HEADER.JOURNEY" | translate }}</a
         >
+        <!-- Projects -->
         <a
           routerLink="/professional-projects"
           routerLinkActive="active"
@@ -210,6 +129,7 @@
           (click)="toggleMenu()"
           >{{ "HEADER.PRO_PROJECTS" | translate }}</a
         >
+        <!-- Contact -->
         <a
           routerLink="/personal-projects"
           routerLinkActive="active"
@@ -217,6 +137,7 @@
           (click)="toggleMenu()"
           >{{ "HEADER.PERSONAL_PROJECTS" | translate }}</a
         >
+        <!-- Resume -->
         <a
           routerLink="/cv"
           routerLinkActive="active"
@@ -224,38 +145,30 @@
           (click)="toggleMenu()"
           >{{ "HEADER.RESUME" | translate }}</a
         >
+        <!-- Contact -->
+        <a
+          routerLink="/contact"
+          routerLinkActive="active"
+          class="mobile-nav-link"
+          (click)="toggleMenu()"
+          >{{ "HEADER.CONTACT" | translate }}</a
+        >
       </div>
+      <!-- Language Toggle -->
       <button (click)="toggleLanguage()" class="language-toggle">
-        <svg
+        <img
+          src="assets/svg/french-flag.svg"
           *ngIf="currentLanguage === 'fr'"
+          alt="French flag"
           class="flag"
-          xmlns="http://www.w3.org/2000/svg"
-          id="flag-icons-fr"
-          viewBox="0 0 640 480"
-        >
-          <path fill="#fff" d="M0 0h640v480H0z" />
-          <path fill="#002654" d="M0 0h213.3v480H0z" />
-          <path fill="#ce1126" d="M426.7 0H640v480H426.7z" />
-        </svg>
-        <svg
+        />
+
+        <img
+          src="assets/svg/english-flag.svg"
           *ngIf="currentLanguage === 'en'"
+          alt="English flag"
           class="flag"
-          xmlns="http://www.w3.org/2000/svg"
-          id="flag-icons-gb"
-          viewBox="0 0 640 480"
-        >
-          <path fill="#012169" d="M0 0h640v480H0z" />
-          <path
-            fill="#FFF"
-            d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"
-          />
-          <path
-            fill="#C8102E"
-            d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"
-          />
-          <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z" />
-          <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z" />
-        </svg>
+        />
         {{ currentLanguage === "en" ? "EN" : "FR" }}
       </button>
     </div>

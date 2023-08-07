@@ -17,6 +17,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { ProjectsNavigationComponent } from './components/projects-navigation/projects-navigation.component';
 import { SliderTestimonialsComponent } from './components/slider-testimonials/slider-testimonials.component';
 import { CustomSelectComponent } from './components/custom-select/custom-select.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -36,6 +37,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProjectsNavigationComponent,
     SliderTestimonialsComponent,
     CustomSelectComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

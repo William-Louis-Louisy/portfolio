@@ -2,15 +2,17 @@
   "HEADER": {
     "HOME": "Accueil",
     "JOURNEY": "Parcours",
-    "PRO_PROJECTS": "Projets professionnels",
-    "PERSONAL_PROJECTS": "Projets personnels",
-    "RESUME": "CV"
+    "PROJECTS": "Projets",
+    "PRO_PROJECTS": "Professionnels",
+    "PERSONAL_PROJECTS": "Personnels",
+    "RESUME": "CV",
+    "CONTACT": "Contact"
   },
 
   "HOMEPAGE": {
     "TITLE": "Bonjour, je suis ",
     "SUBTITLE": "Développeur passionné, curieux et créatif",
-    "CONTENT": "De l'exploration créative au design centré sur l'humain, résoudre des problèmes, une tasse de café à portée de main, voilà ma recette pour créer des applications intuitives et performantes. Découvrez mon travail et apprenez en plus sur moi."
+    "CONTENT": "Imaginer des designs centrés sur l'humain, résoudre des problèmes, une tasse de café à portée de main, voilà ma recette pour créer des applications intuitives et performantes. Découvrez mon travail et apprenez en plus sur moi."
   },
 
   "JOURNEY": {
@@ -19,6 +21,11 @@
     "SUMMARY3": "Ensuite, j'ai passé une décennie dans le secteur de la restauration en tant que manager. Cette période m'a permis d'acquérir une solide expérience en leadership, gestion de projets, communication ainsi qu'une excellente organisation et gestion du temps.",
     "SUMMARY4": "Enfin, j'ai exercé pendant trois ans en tant que coiffeur-barbier indépendant. Cette expérience a renforcé mon sens de l'écoute et ma précision, tout en développant ma capacité à créer des solutions sur mesure pour répondre aux besoins spécifiques de chaque client.",
     "SUMMARY5": "Chacune de ces étapes a contribué à me forger en tant que professionnel méticuleux, adaptable et orienté vers les solutions. Ces valeurs et compétences, je les applique aujourd'hui dans mon travail en tant que développeur web."
+  },
+
+  "CONTACT": {
+    "TITLE": "Contactez-moi",
+    "SUBTITLE": "Je suis toujours à la recherche de nouveaux défis et de nouvelles opportunités."
   },
 
   "LABELS": {
@@ -35,6 +42,9 @@
     "PROFESSIONAL": "Professionnel",
     "COURSES": "Formation",
     "CAREER_PATH": "Parcours professionnel",
-    "CHECK_IT_OUT": "Découvrez-le"
+    "CHECK_IT_OUT": "Découvrez-le",
+    "MAIL": "Email",
+    "PHONE": "Téléphone",
+    "LINKEDIN": "LinkedIn"
   }
 }

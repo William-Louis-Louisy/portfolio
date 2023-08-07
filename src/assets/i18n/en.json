@@ -2,15 +2,17 @@
   "HEADER": {
     "HOME": "Home",
     "JOURNEY": "Journey",
-    "PRO_PROJECTS": "Professional Projects",
-    "PERSONAL_PROJECTS": "Personal Projects",
-    "RESUME": "Resume"
+    "PROJECTS": "Projects",
+    "PRO_PROJECTS": "Professional",
+    "PERSONAL_PROJECTS": "Personal",
+    "RESUME": "Resume",
+    "CONTACT": "Contact"
   },
 
   "HOMEPAGE": {
     "TITLE": "Hello, I'm ",
     "SUBTITLE": "Passionate, Curious, and Creative Developer",
-    "CONTENT": "From creative exploration to human-centered design, solving problems with a cup of coffee at hand, this is my recipe for creating intuitive and high-performing applications. Discover my work and learn more about me."
+    "CONTENT": "Imagining human-centred designs, solving problems with a cup of coffee at hand, this is my recipe for creating intuitive and high-performing applications. Discover my work and learn more about me."
   },
 
   "JOURNEY": {
@@ -19,6 +21,11 @@
     "SUMMARY3": "Then, I spent a decade in the restaurant industry as a manager. This period allowed me to gain solid experience in leadership, project management, communication, as well as excellent organization and time management skills.",
     "SUMMARY4": "Finally, I worked for three years as an independent barber. This experience strengthened my listening skills and precision, while developing my ability to create tailor-made solutions to meet the specific needs of each client.",
     "SUMMARY5": "Each of these stages has contributed to shaping me as a meticulous, adaptable, and solution-oriented professional. These values and skills, I apply them today in my work as a web developer."
+  },
+
+  "CONTACT": {
+    "TITLE": "Contact Me",
+    "SUBTITLE": "I'm always looking for new challenges and opportunities."
   },
 
   "LABELS": {
@@ -35,6 +42,9 @@
     "PROFESSIONAL": "Professional",
     "COURSES": "Courses",
     "CAREER_PATH": "Career Path",
-    "CHECK_IT_OUT": "Check it out"
+    "CHECK_IT_OUT": "Check it out",
+    "MAIL": "Mail",
+    "PHONE": "Phone",
+    "LINKEDIN": "LinkedIn"
   }
 }

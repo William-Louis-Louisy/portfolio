@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #dcdcdc;
+  color: var(--text-color);
   padding-top: 64px;
   overflow-x: hidden;
 }
@@ -21,7 +21,7 @@
 .project-title {
   font-size: 2.5rem;
   font-weight: bold;
-  color: #ff8731;
+  color: var(--accent-color);
 }
 
 .project-title-mobile {
@@ -67,13 +67,13 @@
 .item-title {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #ff8731;
+  color: var(--accent-color);
 }
 
 .item-text {
   font-size: 1rem;
   font-weight: 300;
-  color: #dcdcdc;
+  color: var(--text-color);
 }
 
 .stack-container {
@@ -119,8 +119,8 @@
   padding: 0.5rem 1rem;
   border-radius: 6px;
   border: transparent solid 2px;
-  background-color: #ff8731;
-  color: #0a0a0a;
+  background-color: var(--accent-color);
+  color: var(--background-color);
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -129,9 +129,9 @@
 .button-alt {
   padding: 0.5rem 1rem;
   border-radius: 6px;
-  border: #ff8731 solid 2px;
-  background-color: #0a0a0a;
-  color: #ff8731;
+  border: var(--accent-color) solid 2px;
+  background-color: var(--background-color);
+  color: var(--accent-color);
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -190,7 +190,7 @@
     display: block;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ff8731;
+    color: var(--accent-color);
     margin-bottom: 2rem;
   }
 
@@ -198,7 +198,7 @@
     display: block;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #ff8731;
+    color: var(--accent-color);
     margin-bottom: 2rem;
   }
 
