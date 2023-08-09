@@ -1,1 +1,90 @@
-<p>admin-panel works!</p>
+<div class="page-container">
+  <!-- Page Title -->
+  <div class="page-title">
+    <h1>Admin Panel</h1>
+  </div>
+
+  <!-- ----*********************************************---- -->
+
+  <!-- Courses -->
+  <div class="section">
+    <!-- Section header -->
+    <div class="section-header">
+      <!-- Section title -->
+      <h2 class="section-title">Courses</h2>
+
+      <!-- Section action -->
+      <button class="create-btn">
+        <i class="fa-solid fa-plus"></i>Create new
+      </button>
+    </div>
+
+    <!-- Section table -->
+    <div class="section-table">
+      <app-custom-table [data]="coursesList"></app-custom-table>
+    </div>
+  </div>
+
+  <!-- ----*********************************************---- -->
+
+  <!-- Jobs -->
+  <div class="section">
+    <!-- Section header -->
+    <div class="section-header">
+      <!-- Section title -->
+      <h2 class="section-title">Jobs</h2>
+
+      <!-- Section action -->
+      <button class="create-btn">
+        <i class="fa-solid fa-plus"></i>Create new
+      </button>
+    </div>
+
+    <!-- Section table -->
+    <div class="section-table">
+      <app-custom-table [data]="jobsList"></app-custom-table>
+    </div>
+  </div>
+
+  <!-- ----*********************************************---- -->
+
+  <!-- Personal projects -->
+  <div class="section">
+    <!-- Section header -->
+    <div class="section-header">
+      <!-- Section title -->
+      <h2 class="section-title">Personal projects</h2>
+
+      <!-- Section action -->
+      <button class="create-btn">
+        <i class="fa-solid fa-plus"></i>Create new
+      </button>
+    </div>
+
+    <!-- Section table -->
+    <div class="section-table">
+      <app-custom-table [data]="personalProjectsList"></app-custom-table>
+    </div>
+  </div>
+
+  <!-- ----*********************************************---- -->
+
+  <!-- Professional projects -->
+  <div class="section">
+    <!-- Section header -->
+    <div class="section-header">
+      <!-- Section title -->
+      <h2 class="section-title">Professional projects</h2>
+
+      <!-- Section action -->
+      <button class="create-btn">
+        <i class="fa-solid fa-plus"></i>Create new
+      </button>
+    </div>
+
+    <!-- Section table -->
+    <div class="section-table">
+      <app-custom-table [data]="professionalProjectsList"></app-custom-table>
+    </div>
+  </div>
+</div>

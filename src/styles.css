@@ -10,6 +10,7 @@
   --background-color: #0a0a0a;
   --text-color: #dcdcdc;
   --alt-bg-color: #7a7a7a;
+  --warning-color: rgb(254, 0, 2);
 }
 
 html {
