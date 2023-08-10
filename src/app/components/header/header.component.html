@@ -79,6 +79,16 @@
 
           {{ currentLanguage === "en" ? "EN" : "FR" }}
         </button>
+
+        <!-- User Container -->
+        <div *ngIf="isLoggedIn()" class="user-container">
+          <i class="fa-solid fa-user-secret admin-icon"></i>
+          <!-- Icône de l'utilisateur -->
+          <button class="logout" (click)="logout()">
+            {{ "HEADER.LOGOUT" | translate }}
+          </button>
+          <!-- Bouton de déconnexion -->
+        </div>
       </div>
     </div>
   </nav>

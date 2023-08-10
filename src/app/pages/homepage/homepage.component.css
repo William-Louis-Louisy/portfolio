@@ -61,7 +61,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   gap: 1rem;
   animation: fadeInRight 2s 2s forwards;

@@ -1,0 +1,612 @@
+<div class="modal-container" *ngIf="isModalOpen">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h2>
+        {{ mode === "create" ? "Create" : mode === "edit" ? "Edit" : "Delete" }}
+        {{ type }}
+      </h2>
+      <button (click)="closeModal()" class="close-button">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form (ngSubmit)="onSubmit()" #modalForm="ngForm">
+        <!-- Course Fields -->
+        <ng-container *ngIf="type === 'course'">
+          <div class="row-form">
+            <div class="form-column">
+              <!--  -->
+              <div class="form-group">
+                <label for="logo">{{ "LABELS.LOGO" | translate }}:</label>
+                <input
+                  type="text"
+                  id="logo"
+                  name="logo"
+                  [(ngModel)]="element.logo"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="school">{{ "LABELS.SCHOOL" | translate }}:</label>
+                <input
+                  type="text"
+                  id="school"
+                  name="school"
+                  [(ngModel)]="element.school"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="title">{{ "LABELS.TITLE" | translate }}:</label>
+                <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  [(ngModel)]="element.title"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="date-block">
+                <div class="form-group">
+                  <label for="startDate"
+                    >{{ "LABELS.START_DATE" | translate }}:</label
+                  >
+                  <input
+                    type="date"
+                    id="startDate"
+                    name="startDate"
+                    [(ngModel)]="element.startDate"
+                    required
+                  />
+                </div>
+
+                <!--  -->
+                <div class="form-group">
+                  <label for="endDate"
+                    >{{ "LABELS.END_DATE" | translate }}:</label
+                  >
+                  <input
+                    type="date"
+                    id="endDate"
+                    name="endDate"
+                    [(ngModel)]="element.endDate"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="form-column">
+              <div class="form-group">
+                <label for="description"
+                  >{{ "LABELS.DESCRIPTION" | translate }}:</label
+                >
+                <textarea
+                  id="description"
+                  name="description"
+                  [(ngModel)]="element.description"
+                  required
+                ></textarea>
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="description_fr"
+                  >{{ "LABELS.DESCRIPTION_FR" | translate }}:</label
+                >
+                <textarea
+                  id="description_fr"
+                  name="description_fr"
+                  [(ngModel)]="element.description_fr"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!-- Job Fields -->
+        <ng-container *ngIf="type === 'job'">
+          <div class="row-form">
+            <div class="form-column">
+              <!--  -->
+              <div class="form-group">
+                <label for="logo">{{ "LABELS.LOGO" | translate }}:</label>
+                <input
+                  type="text"
+                  id="logo"
+                  name="logo"
+                  [(ngModel)]="element.logo"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="company">{{ "LABELS.COMPANY" | translate }}:</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  [(ngModel)]="element.company"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="title">{{ "LABELS.TITLE" | translate }}:</label>
+                <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  [(ngModel)]="element.title"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="date-block">
+                <div class="form-group">
+                  <label for="startDate"
+                    >{{ "LABELS.START_DATE" | translate }}:</label
+                  >
+                  <input
+                    type="date"
+                    id="startDate"
+                    name="startDate"
+                    [(ngModel)]="element.startDate"
+                    required
+                  />
+                </div>
+
+                <!--  -->
+                <div class="form-group">
+                  <label for="endDate"
+                    >{{ "LABELS.END_DATE" | translate }}:</label
+                  >
+                  <input
+                    type="date"
+                    id="endDate"
+                    name="endDate"
+                    [(ngModel)]="element.endDate"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="form-column">
+              <div class="form-group">
+                <label for="description"
+                  >{{ "LABELS.DESCRIPTION" | translate }}:</label
+                >
+                <textarea
+                  id="description"
+                  name="description"
+                  [(ngModel)]="element.description"
+                  required
+                ></textarea>
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="description_fr"
+                  >{{ "LABELS.DESCRIPTION_FR" | translate }}:</label
+                >
+                <textarea
+                  id="description_fr"
+                  name="description_fr"
+                  [(ngModel)]="element.description_fr"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!-- Personal Project Fields -->
+        <ng-container *ngIf="type === 'personal-project'">
+          <div class="row-form">
+            <div class="form-column">
+              <!--  -->
+              <div class="form-group">
+                <label for="image">{{ "LABELS.IMAGE" | translate }}:</label>
+                <input
+                  type="text"
+                  id="image"
+                  name="image"
+                  [(ngModel)]="element.image"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="name">{{ "LABELS.NAME" | translate }}:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  [(ngModel)]="element.name"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="link">{{ "LABELS.LINK" | translate }}:</label>
+                <input
+                  type="text"
+                  id="link"
+                  name="link"
+                  [(ngModel)]="element.link"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="date-block">
+                <div class="form-group">
+                  <label for="date">Date:</label>
+                  <input
+                    type="text"
+                    id="date"
+                    name="date"
+                    [(ngModel)]="element.date"
+                    required
+                  />
+                </div>
+
+                <!--  -->
+                <div class="form-group">
+                  <label for="date">{{ "LABELS.STACK" | translate }}:</label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    [(ngModel)]="element.date"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="form-column">
+              <div class="form-group">
+                <label for="description"
+                  >{{ "LABELS.DESCRIPTION" | translate }}:</label
+                >
+                <textarea
+                  id="description"
+                  name="description"
+                  [(ngModel)]="element.description"
+                  required
+                ></textarea>
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="description_fr"
+                  >{{ "LABELS.DESCRIPTION_FR" | translate }}:</label
+                >
+                <textarea
+                  id="description_fr"
+                  name="description_fr"
+                  [(ngModel)]="element.description_fr"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- --------------------------------------------- -->
+
+              <div class="form-group">
+                <label for="short_description"
+                  >Short {{ "LABELS.DESCRIPTION" | translate }}:</label
+                >
+                <textarea
+                  id="short_description"
+                  name="short_description"
+                  [(ngModel)]="element.short_description"
+                  required
+                ></textarea>
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="short_description_fr"
+                  >Short {{ "LABELS.DESCRIPTION_FR" | translate }}:</label
+                >
+                <textarea
+                  id="short_description_fr"
+                  name="short_description_fr"
+                  [(ngModel)]="element.short_description_fr"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!-- Professional Project Fields -->
+        <ng-container *ngIf="type === 'professional-project'">
+          <div class="row-form">
+            <div class="form-column">
+              <!--  -->
+              <div class="form-group">
+                <label for="image">{{ "LABELS.IMAGE" | translate }}:</label>
+                <input
+                  type="text"
+                  id="image"
+                  name="image"
+                  [(ngModel)]="element.image"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="name">{{ "LABELS.NAME" | translate }}:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  [(ngModel)]="element.name"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="date-block">
+                <div class="form-group">
+                  <label for="date">Date:</label>
+                  <input
+                    type="text"
+                    id="date"
+                    name="date"
+                    [(ngModel)]="element.date"
+                    required
+                  />
+                </div>
+
+                <!--  -->
+                <div class="form-group">
+                  <label for="date">{{ "LABELS.STACK" | translate }}:</label>
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    [(ngModel)]="element.date"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="form-column">
+              <div class="form-group">
+                <label for="description"
+                  >{{ "LABELS.DESCRIPTION" | translate }}:</label
+                >
+                <textarea
+                  id="description"
+                  name="description"
+                  [(ngModel)]="element.description"
+                  required
+                ></textarea>
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="description_fr"
+                  >{{ "LABELS.DESCRIPTION_FR" | translate }}:</label
+                >
+                <textarea
+                  id="description_fr"
+                  name="description_fr"
+                  [(ngModel)]="element.description_fr"
+                  required
+                ></textarea>
+              </div>
+
+              <!-- --------------------------------------------- -->
+
+              <div class="form-group">
+                <label for="short_description"
+                  >Short {{ "LABELS.DESCRIPTION" | translate }}:</label
+                >
+                <textarea
+                  id="short_description"
+                  name="short_description"
+                  [(ngModel)]="element.short_description"
+                  required
+                ></textarea>
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="short_description_fr"
+                  >Short {{ "LABELS.DESCRIPTION_FR" | translate }}:</label
+                >
+                <textarea
+                  id="short_description_fr"
+                  name="short_description_fr"
+                  [(ngModel)]="element.short_description_fr"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!-- Stack Fields -->
+        <ng-container *ngIf="type === 'stack'">
+          <div class="row-form">
+            <div class="form-column">
+              <!--  -->
+              <div class="form-group">
+                <label for="icon">{{ "LABELS.ICON" | translate }}:</label>
+                <input
+                  type="text"
+                  id="icon"
+                  name="icon"
+                  [(ngModel)]="element.icon"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="name">{{ "LABELS.NAME" | translate }}:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  [(ngModel)]="element.name"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!-- Task Fields -->
+        <ng-container *ngIf="type === 'task'">
+          <div class="row-form">
+            <div class="form-column">
+              <!--  -->
+              <div class="form-group">
+                <label for="name">{{ "LABELS.NAME" | translate }}:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  [(ngModel)]="element.name"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="name_fr">{{ "LABELS.NAME_FR" | translate }}:</label>
+                <input
+                  type="text"
+                  id="name_fr"
+                  name="name_fr"
+                  [(ngModel)]="element.name_fr"
+                  required
+                />
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="form-column">
+              <div class="form-group">
+                <label for="description"
+                  >{{ "LABELS.DESCRIPTION" | translate }}:</label
+                >
+                <textarea
+                  id="description"
+                  name="description"
+                  [(ngModel)]="element.description"
+                  required
+                ></textarea>
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="description_fr"
+                  >{{ "LABELS.DESCRIPTION_FR" | translate }}:</label
+                >
+                <textarea
+                  id="description_fr"
+                  name="description_fr"
+                  [(ngModel)]="element.description_fr"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!-- Feature Fields -->
+        <ng-container *ngIf="type === 'feature'">
+          <div class="row-form">
+            <div class="form-column">
+              <!--  -->
+              <div class="form-group">
+                <label for="name">{{ "LABELS.NAME" | translate }}:</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  [(ngModel)]="element.name"
+                  required
+                />
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="name_fr">{{ "LABELS.NAME_FR" | translate }}:</label>
+                <input
+                  type="text"
+                  id="name_fr"
+                  name="name_fr"
+                  [(ngModel)]="element.name_fr"
+                  required
+                />
+              </div>
+            </div>
+
+            <!--  -->
+            <div class="form-column">
+              <div class="form-group">
+                <label for="description"
+                  >{{ "LABELS.DESCRIPTION" | translate }}:</label
+                >
+                <textarea
+                  id="description"
+                  name="description"
+                  [(ngModel)]="element.description"
+                  required
+                ></textarea>
+              </div>
+
+              <!--  -->
+              <div class="form-group">
+                <label for="description_fr"
+                  >{{ "LABELS.DESCRIPTION_FR" | translate }}:</label
+                >
+                <textarea
+                  id="description_fr"
+                  name="description_fr"
+                  [(ngModel)]="element.description_fr"
+                  required
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!-- Button row -->
+        <div class="action-row">
+          <button type="submit" class="submit-button">
+            {{
+              mode === "create" ? "Create" : mode === "edit" ? "Save" : "Delete"
+            }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

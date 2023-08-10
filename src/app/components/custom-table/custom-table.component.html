@@ -1,0 +1,38 @@
+<div class="table-container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col" class="table-header-first">ID</th>
+        <th scope="col" class="table-header">
+          {{ "LABELS.NAME" | translate }}
+        </th>
+        <th scope="col" class="table-header-action">
+          <span class="sr-only">{{ "LABELS.EDIT" | translate }}</span>
+
+          <span class="sr-only">{{ "LABELS.DELETE" | translate }}</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody class="table-body">
+      <tr *ngFor="let item of data">
+        <td class="table-cell-first">
+          {{ item._id }}
+        </td>
+        <td class="table-cell">
+          {{ item.name ? item.name : item.title }}
+        </td>
+        <td class="table-cell-action">
+          <button class="edit" (click)="editElement(item)">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <span class="btn-label">{{ "LABELS.EDIT" | translate }}</span>
+          </button>
+
+          <button class="delete" (click)="deleteElement(item)">
+            <i class="fa-solid fa-trash-can"></i>
+            <span class="btn-label">{{ "LABELS.DELETE" | translate }}</span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

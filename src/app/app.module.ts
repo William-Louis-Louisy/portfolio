@@ -18,6 +18,10 @@ import { ProjectsNavigationComponent } from './components/projects-navigation/pr
 import { SliderTestimonialsComponent } from './components/slider-testimonials/slider-testimonials.component';
 import { CustomSelectComponent } from './components/custom-select/custom-select.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { LoginComponent } from './pages/login/login.component';
+import { FormsModule } from '@angular/forms';
+import { CustomTableComponent } from './components/custom-table/custom-table.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -38,9 +42,13 @@ export function HttpLoaderFactory(http: HttpClient) {
     SliderTestimonialsComponent,
     CustomSelectComponent,
     ContactComponent,
+    LoginComponent,
+    CustomTableComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule,
     TranslateModule.forRoot({

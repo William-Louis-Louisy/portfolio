@@ -1,1 +1,45 @@
-<p>admin-panel works!</p>
+<div class="page-container">
+  <!-- Page Title -->
+  <div class="page-title">
+    <h1>{{ "LABELS.ADMIN_PANEL" | translate }}</h1>
+  </div>
+
+  <div class="section" *ngFor="let section of sections">
+    <!-- Section header -->
+    <div class="section-header">
+      <!-- Section title -->
+      <h2 class="section-title">
+        {{ section.translation | translate }}
+        <i
+          class="fas fa-chevron-down icon"
+          (click)="toggleSection(section.id)"
+          [ngClass]="{ rotate: this.activeSection === section.id }"
+        ></i>
+      </h2>
+
+      <!-- Section action -->
+      <button (click)="openCreateModal(section.type)" class="create-btn">
+        <i class="fa-solid fa-plus"></i
+        ><span class="btn-label">{{ "LABELS.CREATE_NEW" | translate }}</span>
+      </button>
+    </div>
+
+    <!-- Section table -->
+    <div class="section-table" *ngIf="activeSection === section.id">
+      <app-custom-table
+        [data]="(section.data$ | async) ?? []"
+        (edit)="openEditModal(section.type, $event)"
+        (delete)="openDeleteModal(section.type, $event)"
+      ></app-custom-table>
+    </div>
+  </div>
+</div>
+
+<app-modal
+  [mode]="mode"
+  [type]="type"
+  [element]="element"
+  (close)="onClose()"
+  [isModalOpen]="isModalOpen"
+  (closeModalEvent)="onModalClosed()"
+></app-modal>

@@ -32,4 +32,36 @@ export class ProjectsService {
   getProfessionalProjectById(id: string): Observable<Project> {
     return this.http.get<Project>(`${this.url}/professional-project/${id}`);
   }
+
+  // Create personal project
+  createPersonalProject(project: Project): Observable<Project> {
+    return this.http.post<Project>(`${this.url}/personal-project`, project);
+  }
+
+  // Create professional project
+  createProfessionalProject(project: Project): Observable<Project> {
+    return this.http.post<Project>(`${this.url}/professional-project`, project);
+  }
+
+  // Update personal project
+  updatePersonalProject(project: Project): Observable<Project> {
+    return this.http.put<Project>(`${this.url}/personal-project`, project);
+  }
+
+  // Update professional project
+  updateProfessionalProject(project: Project): Observable<Project> {
+    return this.http.put<Project>(`${this.url}/professional-project`, project);
+  }
+
+  // Delete personal project
+  deletePersonalProject(projectId: string): Observable<any> {
+    return this.http.delete<any>(`${this.url}/personal-project/${projectId}`);
+  }
+
+  // Delete professional project
+  deleteProfessionalProject(projectId: string): Observable<any> {
+    return this.http.delete<any>(
+      `${this.url}/professional-project/${projectId}`
+    );
+  }
 }

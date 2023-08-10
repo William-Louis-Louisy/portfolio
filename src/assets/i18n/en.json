@@ -6,7 +6,8 @@
     "PRO_PROJECTS": "Professional",
     "PERSONAL_PROJECTS": "Personal",
     "RESUME": "Resume",
-    "CONTACT": "Contact"
+    "CONTACT": "Contact",
+    "LOGOUT": "Logout"
   },
 
   "HOMEPAGE": {
@@ -45,6 +46,25 @@
     "CHECK_IT_OUT": "Check it out",
     "MAIL": "Mail",
     "PHONE": "Phone",
-    "LINKEDIN": "LinkedIn"
+    "LINKEDIN": "LinkedIn",
+    "CREATE_NEW": "Create New",
+    "EDIT": "Edit",
+    "DELETE": "Delete",
+    "ADMIN_PANEL": "Admin Panel",
+    "PERSONAL_PROJECTS": "Personal Projects",
+    "PROFESSIONAL_PROJECTS": "Professional Projects",
+    "NAME": "Name",
+    "NAME_FR": "Name (FR)",
+    "TITLE": "Title",
+    "LOGO": "Logo",
+    "IMAGE": "Image",
+    "DESCRIPTION_FR": "Description (FR)",
+    "START_DATE": "Start Date",
+    "END_DATE": "End Date",
+    "LINK": "Link",
+    "GITHUB": "Github",
+    "COMPANY": "Company",
+    "SCHOOL": "School",
+    "ICON": "Icon"
   }
 }
