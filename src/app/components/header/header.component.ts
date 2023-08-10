@@ -1,5 +1,6 @@
 import { TranslateService } from '@ngx-translate/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from './../../services/auth.service';
 import { Component, ElementRef, HostListener } from '@angular/core';
 
 @Component({
@@ -25,7 +26,9 @@ export class HeaderComponent {
     // Inject the route
     private route: ActivatedRoute,
     // Inject the element ref
-    private elementRef: ElementRef
+    private elementRef: ElementRef,
+    // Inject the auth service
+    public auth: AuthService
   ) {
     // Set the current language
     this.currentLanguage = translate.currentLang;
@@ -50,6 +53,18 @@ export class HeaderComponent {
   // Is active
   isActive(): boolean {
     return this.activeRoutes.includes(this.router.url);
+  }
+
+  // Is Logged In
+  isLoggedIn(): boolean {
+    return !!this.auth.getToken();
+  }
+
+  // Logout
+  logout(): void {
+    this.auth.logout().subscribe(() => {
+      this.router.navigate(['/login']);
+    });
   }
 
   // Toggle language

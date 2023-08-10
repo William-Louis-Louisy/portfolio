@@ -3,11 +3,13 @@
     <thead>
       <tr>
         <th scope="col" class="table-header-first">ID</th>
-        <th scope="col" class="table-header">Name</th>
+        <th scope="col" class="table-header">
+          {{ "LABELS.NAME" | translate }}
+        </th>
         <th scope="col" class="table-header-action">
-          <span class="sr-only">Edit</span>
+          <span class="sr-only">{{ "LABELS.EDIT" | translate }}</span>
 
-          <span class="sr-only">Delete</span>
+          <span class="sr-only">{{ "LABELS.DELETE" | translate }}</span>
         </th>
       </tr>
     </thead>
@@ -20,13 +22,14 @@
           {{ item.name ? item.name : item.title }}
         </td>
         <td class="table-cell-action">
-          <button class="edit">
+          <button class="edit" (click)="editElement(item)">
             <i class="fa-solid fa-pen-to-square"></i>
-            Edit
+            <span class="btn-label">{{ "LABELS.EDIT" | translate }}</span>
           </button>
 
-          <button class="delete">
-            <i class="fa-solid fa-trash-can"></i> Delete
+          <button class="delete" (click)="deleteElement(item)">
+            <i class="fa-solid fa-trash-can"></i>
+            <span class="btn-label">{{ "LABELS.DELETE" | translate }}</span>
           </button>
         </td>
       </tr>

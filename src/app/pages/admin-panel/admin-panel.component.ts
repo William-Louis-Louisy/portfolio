@@ -1,9 +1,14 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { IJob } from 'src/app/types/job.model';
 import { Subscription, Observable } from 'rxjs';
+import { ITask } from 'src/app/types/task.model';
+import { ICourse } from 'src/app/types/course.model';
+import { TranslateService } from '@ngx-translate/core';
+import { TaskService } from 'src/app/services/task.service';
+import { StackService } from 'src/app/services/stack.service';
+import { FeatureService } from 'src/app/services/feature.service';
 import { CoursesService } from 'src/app/services/courses.service';
 import { ProjectsService } from 'src/app/services/projects.service';
-import { ICourse } from 'src/app/types/course.model';
 
 @Component({
   selector: 'app-admin-panel',
@@ -11,6 +16,19 @@ import { ICourse } from 'src/app/types/course.model';
   styleUrls: ['./admin-panel.component.css'],
 })
 export class AdminPanelComponent {
+  // Properties for modal
+  public mode: 'create' | 'edit' | 'delete' | null = null;
+  public type:
+    | 'course'
+    | 'job'
+    | 'personal-project'
+    | 'professional-project'
+    | 'stack'
+    | 'task'
+    | 'feature'
+    | null = null;
+  public element: any = null;
+
   // Courses
   public courses$: Observable<ICourse[]>;
   public coursesList: ICourse[] = [];
@@ -43,10 +61,22 @@ export class AdminPanelComponent {
   currentLanguage: string;
   langChangeSubscription?: Subscription;
 
+  // Define modal state
+  isModalOpen = false;
+
+  // Define active section
+  activeSection: string | null = null;
+
+  // Define sections
+  sections: any[] = [];
+
   constructor(
+    public taskService: TaskService,
+    public stackService: StackService,
+    private translate: TranslateService,
+    public featureService: FeatureService,
     public coursesService: CoursesService,
-    public projectsService: ProjectsService,
-    private translate: TranslateService
+    public projectsService: ProjectsService
   ) {
     // Initialize courses$ with an empty Observable
     this.courses$ = new Observable<any>();
@@ -71,6 +101,46 @@ export class AdminPanelComponent {
 
     // Initialize currentLanguage
     this.currentLanguage = translate.currentLang;
+  }
+
+  // Method to open modal for creation
+  openCreateModal(type: string) {
+    this.type = type as any;
+    this.mode = 'create';
+    this.element = {};
+    this.isModalOpen = true;
+  }
+
+  // Method to open modal for editing
+  openEditModal(type: string, elementToEdit: any) {
+    this.type = type as any;
+    this.mode = 'edit';
+    this.element = elementToEdit;
+    this.isModalOpen = true;
+  }
+
+  // Method to open modal for deletion
+  openDeleteModal(type: string, elementToDelete: any) {
+    this.type = type as any;
+    this.mode = 'delete';
+    this.element = elementToDelete;
+    this.isModalOpen = true;
+  }
+
+  // Method to handle close event of modal
+  onClose() {
+    this.mode = null;
+    this.type = null;
+    this.element = null;
+    this.isModalOpen = true;
+  }
+
+  onModalClosed() {
+    this.isModalOpen = false;
+  }
+
+  toggleSection(section: string) {
+    this.activeSection = this.activeSection === section ? null : section;
   }
 
   ngOnInit() {
@@ -99,12 +169,75 @@ export class AdminPanelComponent {
       this.professionalProjectsList = professionalProjects;
     });
 
+    // Get all tasks
+    this.tasks$ = this.taskService.getAllTasks();
+    this.tasks$.subscribe((tasks) => {
+      this.tasksList = tasks;
+    });
+
+    // Get all features
+    this.features$ = this.featureService.getAllFeatures();
+    this.features$.subscribe((features) => {
+      this.featuresList = features;
+    });
+
+    // Get all stack items
+    this.stackItems$ = this.stackService.getAllStackItems();
+    this.stackItems$.subscribe((stackItems) => {
+      this.stackItemsList = stackItems;
+    });
+
     // Subscribe to language change
     this.langChangeSubscription = this.translate.onLangChange.subscribe(
       (event) => {
         this.currentLanguage = event.lang;
       }
     );
+
+    this.sections = [
+      {
+        id: 'courses',
+        type: 'course',
+        translation: 'LABELS.COURSES',
+        data$: this.courses$,
+      },
+      {
+        id: 'jobs',
+        type: 'job',
+        translation: 'LABELS.CAREER_PATH',
+        data$: this.jobs$,
+      },
+      {
+        id: 'personal-projects',
+        type: 'personal-project',
+        translation: 'LABELS.PERSONAL_PROJECTS',
+        data$: this.personalProjects$,
+      },
+      {
+        id: 'professional-projects',
+        type: 'professional-project',
+        translation: 'LABELS.PROFESSIONAL_PROJECTS',
+        data$: this.professionalProjects$,
+      },
+      {
+        id: 'tasks',
+        type: 'task',
+        translation: 'LABELS.TASKSPERFORMED',
+        data$: this.tasks$,
+      },
+      {
+        id: 'features',
+        type: 'feature',
+        translation: 'LABELS.FEATURES',
+        data$: this.features$,
+      },
+      {
+        id: 'stack',
+        type: 'stack',
+        translation: 'LABELS.STACK',
+        data$: this.stackItems$,
+      },
+    ];
   }
 
   ngOnDestroy() {

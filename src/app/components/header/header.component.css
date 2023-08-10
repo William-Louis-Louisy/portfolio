@@ -245,6 +245,30 @@
   text-underline-offset: 0.25rem;
 }
 
+.user-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.logout {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+  cursor: pointer;
+}
+
+.logout:hover {
+  color: var(--accent-color);
+  transition: all 0.15s ease-in-out;
+}
+
+.admin-icon {
+  color: var(--accent-color);
+  font-size: 1.25rem;
+}
+
 /* Style pour les écrans de moins de 799px de large */
 @media (max-width: 799px) {
   .navbar {

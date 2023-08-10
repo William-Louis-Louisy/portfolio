@@ -24,8 +24,13 @@ export class AuthService {
   }
 
   // Logout
-  logout(): void {
-    localStorage.removeItem('token');
+  logout() {
+    const url = `${this.url}/logout`;
+    return this.http.get(url).pipe(
+      tap((res: any) => {
+        localStorage.removeItem('token');
+      })
+    );
     // Optionally, navigate the user to the login page or other actions on logout
   }
 

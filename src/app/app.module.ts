@@ -21,6 +21,7 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { CustomTableComponent } from './components/custom-table/custom-table.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -43,6 +44,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     LoginComponent,
     CustomTableComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
