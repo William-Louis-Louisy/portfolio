@@ -269,13 +269,11 @@
                 <!--  -->
                 <div class="form-group">
                   <label for="date">{{ "LABELS.STACK" | translate }}:</label>
-                  <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    [(ngModel)]="element.date"
-                    required
-                  />
+                  <app-form-select
+                    [options]="element.stack"
+                    [(ngModel)]="element.stack"
+                    [placeholder]="'LABELS.STACK' | translate"
+                  ></app-form-select>
                 </div>
               </div>
             </div>
