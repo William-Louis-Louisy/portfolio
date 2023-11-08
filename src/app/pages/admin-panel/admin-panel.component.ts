@@ -107,7 +107,10 @@ export class AdminPanelComponent {
   openCreateModal(type: string) {
     this.type = type as any;
     this.mode = 'create';
-    this.element = {};
+    this.element = {
+      stackItemsList: this.stackItemsList,
+      featuresList: this.featuresList,
+    };
     this.isModalOpen = true;
   }
 

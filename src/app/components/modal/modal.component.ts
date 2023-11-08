@@ -39,6 +39,10 @@ export class ModalComponent {
     private stackService: StackService
   ) {}
 
+  ngOnInit() {
+    console.log('element: ', this.element);
+  }
+
   onSubmit() {
     if (this.type === 'course') {
       if (this.mode === 'create') {
