@@ -1,0 +1,9 @@
+<div class="button" (click)="toggleDropdown()">
+  {{ placeholder }}
+  <i class="fas fa-chevron-down icon"></i>
+  <div class="dropdown" *ngIf="showDropdown">
+    <span class="option" *ngFor="let option of options" [id]="option._id">{{
+      option.name
+    }}</span>
+  </div>
+</div>

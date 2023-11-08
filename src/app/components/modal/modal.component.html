@@ -217,7 +217,7 @@
         <ng-container *ngIf="type === 'personal-project'">
           <div class="row-form">
             <div class="form-column">
-              <!--  -->
+              <!-- IMAGE -->
               <div class="form-group">
                 <label for="image">{{ "LABELS.IMAGE" | translate }}:</label>
                 <input
@@ -229,7 +229,7 @@
                 />
               </div>
 
-              <!--  -->
+              <!-- PROJECT NAME -->
               <div class="form-group">
                 <label for="name">{{ "LABELS.NAME" | translate }}:</label>
                 <input
@@ -241,7 +241,7 @@
                 />
               </div>
 
-              <!--  -->
+              <!-- PROJECT LINK -->
               <div class="form-group">
                 <label for="link">{{ "LABELS.LINK" | translate }}:</label>
                 <input
@@ -268,14 +268,12 @@
 
                 <!--  -->
                 <div class="form-group">
-                  <label for="date">{{ "LABELS.STACK" | translate }}:</label>
-                  <input
-                    type="date"
-                    id="date"
-                    name="date"
-                    [(ngModel)]="element.date"
-                    required
-                  />
+                  <label for="stack">{{ "LABELS.STACK" | translate }}:</label>
+                  <app-form-select
+                    [options]="element.stackItemsList"
+                    [(ngModel)]="element.stack"
+                    [placeholder]="'LABELS.STACK' | translate"
+                  ></app-form-select>
                 </div>
               </div>
             </div>

@@ -1,11 +1,18 @@
 import { Component, ElementRef, HostListener, Input } from '@angular/core';
+import { IOption } from 'src/app/types/option.model';
 
 @Component({
-  selector: 'app-custom-select',
-  templateUrl: './custom-select.component.html',
-  styleUrls: ['./custom-select.component.css'],
+  selector: 'app-form-select',
+  templateUrl: './form-select.component.html',
+  styleUrls: ['./form-select.component.css'],
 })
-export class CustomSelectComponent {
+export class FormSelectComponent {
+  // Define options
+  @Input() options: IOption[] = [];
+
+  // Define placeholder
+  @Input() placeholder: string = '';
+
   // Define the select state
   showDropdown = false;
 
